@@ -5,10 +5,10 @@ with open('textfile.txt', 'a+') as fh:
     # print fh.read().splitlines()
     pass
 
-l = ['hello.txt']
+list_thing = ['hello.txt']
 s = 'hello.txt'
 if s in l:
-    #print 'pygay'
+    # print 'pygay'
     pass
 dit = {
     'hello': 1,
