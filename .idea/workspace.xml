@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="faef416b-b0b1-4556-abbd-064649831357" name="Default" comment="ima shelcha zona&#10;simply added fake variables to stop the errors from showing up">
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Itay_Feldman.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/Itay_Feldman.xml" afterDir="false" />
+    <list default="true" id="faef416b-b0b1-4556-abbd-064649831357" name="Default" comment="Added some comments and TODOs">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/http_helper.py" beforeDir="false" afterPath="$PROJECT_DIR$/http_helper.py" afterDir="false" />
     </list>
     <list id="d6285c01-bc3f-40e0-864f-4b55e9a1966a" name="Revert: Second, commit, testing stuff" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,6 +25,7 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="gitignore" value="3" />
+          <entry key="md" value="1" />
           <entry key="py" value="1" />
           <entry key="xml" value="1" />
         </counts>
@@ -33,6 +33,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Git file" value="3" />
+          <entry key="Markdown" value="1" />
           <entry key="Python" value="1" />
           <entry key="XML" value="1" />
         </counts>
@@ -40,18 +41,21 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="gitignore" value="82" />
-          <entry key="py" value="197" />
-          <entry key="txt" value="291" />
+          <entry key="py" value="735" />
+          <entry key="txt" value="357" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Git file" value="82" />
-          <entry key="PLAIN_TEXT" value="291" />
-          <entry key="Python" value="197" />
+          <entry key="PLAIN_TEXT" value="357" />
+          <entry key="Python" value="735" />
         </counts>
       </usages-collector>
     </session>
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="webroot" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
@@ -64,11 +68,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/http_helper.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3680">
-              <caret line="163" column="44" selection-start-line="163" selection-start-column="44" selection-end-line="163" selection-end-column="44" />
+            <state relative-caret-position="200">
+              <caret line="163" column="20" selection-start-line="163" selection-start-column="20" selection-end-line="163" selection-end-column="20" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -85,11 +89,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="115">
               <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/readme.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="345">
+                <caret line="15" column="84" selection-start-line="15" selection-start-column="84" selection-end-line="15" selection-end-column="84" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -128,6 +144,7 @@
       <find>BadRequest</find>
       <find>sys</find>
       <find>socket</find>
+      <find>moved_temp</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -146,10 +163,11 @@
         <option value="$PROJECT_DIR$/NotFound.html" />
         <option value="$PROJECT_DIR$/statusCodes/Forbidden.html" />
         <option value="$PROJECT_DIR$/statusCodes/NotFound.html" />
-        <option value="$PROJECT_DIR$/http_helper.py" />
         <option value="$PROJECT_DIR$/snippets.py" />
         <option value="$PROJECT_DIR$/sandbox2.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/readme.md" />
+        <option value="$PROJECT_DIR$/http_helper.py" />
       </list>
     </option>
   </component>
@@ -199,7 +217,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.sandbox2">
+  <component name="RunManager" selected="Python.web_server1">
     <configuration name="http_helper" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="webroot" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -292,8 +310,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.sandbox2" />
         <item itemvalue="Python.web_server1" />
+        <item itemvalue="Python.sandbox2" />
         <item itemvalue="Python.http_helper" />
         <item itemvalue="Python.sandbox" />
       </list>
@@ -346,29 +364,66 @@
       <option name="project" value="LOCAL" />
       <updated>1542052925342</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="ima shelcha zona&#10;simply added fake variables to stop the errors from showing up">
+      <created>1542055553584</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1542055553584</updated>
+    </task>
+    <task id="LOCAL-00007" summary="added readme.md">
+      <created>1542055646122</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1542055646122</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Bug fix">
+      <created>1542055762353</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1542055762353</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Added some comments and TODOs">
+      <created>1542056557307</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1542056557307</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
+  </component>
+  <component name="TodoView" selected-index="4">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1933" height="1053" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.25813332" />
-      <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info id="DB Browser" order="3" />
-      <window_info anchor="bottom" id="Python Console" order="0" />
-      <window_info anchor="bottom" id="Terminal" order="1" />
-      <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.5002667" side_tool="true" weight="0.32929516" />
-      <window_info anchor="bottom" x="1" y="29" width="1919" height="1017" id="Version Control" order="3" sideWeight="0.49973333" type="WINDOWED" weight="0.329718" />
-      <window_info anchor="bottom" id="Message" order="4" />
-      <window_info anchor="bottom" id="Find" order="5" weight="0.32943678" />
-      <window_info anchor="bottom" id="Run" order="6" weight="0.32943678" />
+      <window_info id="Favorites" order="0" sideWeight="0.5011013" side_tool="true" weight="0.2576" />
+      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.49889868" visible="true" weight="0.2576" />
+      <window_info id="Structure" order="2" sideWeight="0.5011013" side_tool="true" weight="0.2576" />
+      <window_info id="DB Browser" order="3" weight="0.3296" />
+      <window_info anchor="bottom" id="Python Console" order="0" sideWeight="0.49973333" weight="0.32929516" />
+      <window_info anchor="bottom" id="Terminal" order="1" sideWeight="0.4992" weight="0.32929516" />
+      <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.5008" side_tool="true" weight="0.32929516" />
+      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.4992" type="SLIDING" weight="0.32929516" />
+      <window_info anchor="bottom" x="-399" y="477" width="1875" height="299" id="TODO" order="4" sideWeight="0.4992" weight="0.32929516" />
+      <window_info anchor="bottom" id="Message" order="5" />
+      <window_info anchor="bottom" id="Find" order="6" weight="0.32943678" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="10" />
-      <window_info anchor="bottom" id="DB Execution Console" order="11" />
+      <window_info anchor="bottom" id="DB Execution Console" order="10" />
+      <window_info active="true" anchor="bottom" x="1" y="29" width="1919" height="1017" id="Version Control" order="11" sideWeight="0.5008" visible="true" weight="0.3270925" />
       <window_info anchor="right" id="R Graphics" order="0" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="R Packages" order="2" />
@@ -436,7 +491,10 @@
     <MESSAGE value="Second, commit, testing stuff" />
     <MESSAGE value="fixed annoying errors with a few lines&#10;&#10;simply added fake variables to stop the errors from showing up" />
     <MESSAGE value="ima shelcha zona&#10;simply added fake variables to stop the errors from showing up" />
-    <option name="LAST_COMMIT_MESSAGE" value="ima shelcha zona&#10;simply added fake variables to stop the errors from showing up" />
+    <MESSAGE value="added readme.md" />
+    <MESSAGE value="Bug fix" />
+    <MESSAGE value="Added some comments and TODOs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added some comments and TODOs" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/sandbox.py">
@@ -487,16 +545,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/http_helper.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3680">
-          <caret line="163" column="44" selection-start-line="163" selection-start-column="44" selection-end-line="163" selection-end-column="44" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/snippets.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="299">
@@ -521,6 +569,26 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
           <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/readme.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="345">
+            <caret line="15" column="84" selection-start-line="15" selection-start-column="84" selection-end-line="15" selection-end-column="84" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/http_helper.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="163" column="20" selection-start-line="163" selection-start-column="20" selection-end-line="163" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -3,6 +3,7 @@ import os
 from datetime import datetime
 import csv
 full_running_dir = os.path.dirname(os.path.realpath(__file__)) + '\\'
+# TODO write DOCSTRING comments for all functions later
 
 
 def get_request(request):
@@ -157,17 +158,21 @@ def check_moved_temp(resource):
         return False
 
 
-def handle_moved_temp(arg):
-    if not arg:
+def handle_moved_temp(was_moved, new_location):
+    # TODO if moved function returns: True, *new_location* = true, resource was moved; *new_location*, the new location
+    # TODO if not moved function returns: False, '' = false, not moved; '', empty string so there won't be an IndexError
+    if not was_moved:
         pass  # not moved
     else:
         pass  # moved and arg = new location
 
 
 def check_exception(resource, client_sock):
-    if check_forbidden(resource):
+    forbidden = check_forbidden(resource)
+    moved_temp = check_moved_temp(resource)
+    if forbidden:
         handle_forbidden(client_sock)
-    elif check_moved_temp(resource):
-        pass
+    elif moved_temp[0]:
+        handle_moved_temp(client_sock, moved_temp[1])
     else:
         return False
