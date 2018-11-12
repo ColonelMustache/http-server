@@ -146,7 +146,7 @@ def handle_forbidden(client_sock):
 
 
 def check_moved_temp(resource):
-    with open('moved_temp.csv', 'rb') as files_dict:
+    with open('exceptions/moved_temp.csv', 'rb') as files_dict:
         reader = csv.reader(files_dict)
         moved_dict = {}
         for row in reader:
