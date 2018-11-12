@@ -2,4 +2,4 @@
 .gitignore
 uploads/
 # Ignore log files, log files are auto generated
-*.log
+# *.log
