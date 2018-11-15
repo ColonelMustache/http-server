@@ -1,5 +1,6 @@
 # Created by .ignore support plugin (hsz.mobi)
 .gitignore
+.gitattributes
 uploads/
 # Ignore log files, log files are auto generated
 # *.log
