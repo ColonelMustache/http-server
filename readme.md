@@ -8,7 +8,6 @@ for i in range(10):
 - [ ] POST
 - [ ] HEAD
 - [ ] DELETE
-
 - [ ] TRACE
 
 <h2>Goal:</h2>
