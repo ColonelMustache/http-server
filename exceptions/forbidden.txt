@@ -1,2 +1,2 @@
-BLACKLIST:
+BLACKLIST
 hello.txt

@@ -31,6 +31,8 @@ def handle_request(params, client_sock):
         handle_get(params[2].strip('/'), client_sock)
     elif request == 'POST':
         handle_post()
+    else:
+        handle_internal_error(client_sock)
 
 
 # requests handling:
@@ -38,11 +40,11 @@ def handle_get(resource, client_sock):
     check_exception(resource, client_sock)
     if not resource and os.path.exists("index.html"):
         # first request of default page
-        with open("index.html", 'r+') as index_html:
+        with open("index.html", 'rb') as index_html:
             header = "HTTP/1.1 200 OK\r\n" \
-                     "Content-Length: %d\r\n" \
+                     "Content-Length: {0}\r\n" \
                      "Content-Type: text/html; charset=UTF-8\r\n" \
-                     "\r\n" % os.stat("index.html").st_size
+                     "\r\n".format(len(open('./index.html', 'rb').read()))
             client_sock.send(header)
             client_sock.sendall(index_html.read())
     elif os.path.exists(full_running_dir + resource):
@@ -52,15 +54,16 @@ def handle_get(resource, client_sock):
             header = "HTTP/1.1 200 OK\r\n" \
                      "Content-Length: {0}\r\n" \
                      "Content-Type: {1}\r\n" \
-                     "\r\n".format(str(os.stat(resource).st_size), get_content_type(resource))
+                     "\r\n".format(len(open(resource, 'rb').read()), get_content_type(resource))  # str(os.stat(resource).st_size)
             client_sock.send(header)
             client_sock.sendall(requested_resource.read())
     else:
         # 404 page not found
-        with open("statusCodes/NotFound.html", 'r+') as not_found_html:
+        with open("statusCodes/NotFound.html", 'rb') as not_found_html:
             header = "HTTP/1.1 404 Not Found\r\n" \
+                     "Content-Length: {0}" \
                      "Content-Type: text/html; charset=UTF-8\r\n" \
-                     "\r\n"  # .format(os.stat("NotFound.html").st_size)
+                     "\r\n".format(len(open('statusCodes/NotFound.html', 'rb').read()))
 
             """There is no Content-Length header because no matter what I do, for some reason, 
             the file the browser receives is smaller than the size I specify which leads
@@ -120,11 +123,11 @@ def check_forbidden(resource):
         exception_type = data[0]
         files = data[1:]
         # print files
-        if exception_type.upper() == 'WHITELIST:':
+        if exception_type.upper() == 'WHITELIST':
             if resource in files:
                 return False
             return True
-        elif exception_type.upper() == "BLACKLIST:":
+        elif exception_type.upper() == "BLACKLIST":
             if resource in files:
                 return True
             return False
@@ -137,11 +140,11 @@ def check_forbidden(resource):
 
 def handle_forbidden(client_sock):
     # code gets here if the file requested was forbidden to access
-    with open("statusCodes/Forbidden.html", 'a+') as forbidden:
+    with open("statusCodes/Forbidden.html", 'rb') as forbidden:
         header = "HTTP/1.1 403 Forbidden\r\n" \
                  "Content-Length: %d\r\n" \
                  "Content-Type: text/html; charset=UTF-8\r\n" \
-                 "\r\n" % os.stat("statusCodes/Forbidden.html").st_size
+                 "\r\n" % len(open("statusCodes/Forbidden.html", 'rb').read())
         client_sock.send(header)
         client_sock.sendall(forbidden.read())
 
@@ -158,21 +161,24 @@ def check_moved_temp(resource):
         return False
 
 
-def handle_moved_temp(was_moved, new_location):
+def handle_moved_temp(client_sock, new_location):
     # TODO if moved function returns: True, *new_location* = true, resource was moved; *new_location*, the new location
     # TODO if not moved function returns: False, '' = false, not moved; '', empty string so there won't be an IndexError
-    if not was_moved:
-        pass  # not moved
-    else:
-        pass  # moved and arg = new location
+    header = "HTTP/1.1 302 Moved Temporarily\r\n" \
+             "Location: {0}\r\n" \
+             "\r\n".format(new_location)
+    client_sock.send(header)
 
 
 def check_exception(resource, client_sock):
-    forbidden = check_forbidden(resource)
     moved_temp = check_moved_temp(resource)
-    if forbidden:
+    if check_forbidden(resource):
         handle_forbidden(client_sock)
-    elif moved_temp[0]:
-        handle_moved_temp(client_sock, moved_temp[1])
-    else:
-        return False
+    elif moved_temp:
+        handle_moved_temp(client_sock, moved_temp)
+
+
+def handle_internal_error(client_sock):
+    header = "HTTP/1.1 500 Internal Server Error\r\n" \
+             "\r\n"
+    client_sock.send(header)
