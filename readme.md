@@ -1,5 +1,5 @@
 <h1>HTTP Server</h1>
-<h3 color=#ff00ff>Making a viable http server</h3>
+<h3>Making a viable http server</h3>
 <h2>Requests:</h2>
 - [x] GET
 - [ ] POST
