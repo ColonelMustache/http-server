@@ -1,8 +1,7 @@
 <h1>HTTP Server</h1>
-```python
-for i in range(10):
-    print i # yay, printing 0 - 9
-```
+<script>
+    alert("hello!")
+</script>
 <h2>Requests:</h2>
 - [x] GET
 - [ ] POST
