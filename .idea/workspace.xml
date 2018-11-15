@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="faef416b-b0b1-4556-abbd-064649831357" name="Default" comment="edited index1.html&#10;&#10;Signed-off-by: Itay Feldman &lt;itay1405@gmail.com&gt;">
+    <list default="true" id="faef416b-b0b1-4556-abbd-064649831357" name="Default" comment="changed readme.md&#10;&#10;now it is more stylish&#10;Signed-off-by: Itay Feldman &lt;itay1405@gmail.com&gt;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
     </list>
@@ -29,7 +29,7 @@
           <entry key="gitignore" value="4" />
           <entry key="html" value="1" />
           <entry key="log" value="1" />
-          <entry key="md" value="2" />
+          <entry key="md" value="3" />
           <entry key="py" value="1" />
           <entry key="xml" value="1" />
         </counts>
@@ -39,7 +39,7 @@
           <entry key="Git file" value="4" />
           <entry key="HTML" value="1" />
           <entry key="Log" value="1" />
-          <entry key="Markdown" value="2" />
+          <entry key="Markdown" value="3" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="Python" value="1" />
           <entry key="XML" value="1" />
@@ -49,18 +49,18 @@
         <counts>
           <entry key="gitignore" value="89" />
           <entry key="html" value="27" />
-          <entry key="md" value="57" />
-          <entry key="py" value="735" />
-          <entry key="txt" value="405" />
+          <entry key="md" value="149" />
+          <entry key="py" value="736" />
+          <entry key="txt" value="447" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Git file" value="89" />
           <entry key="HTML" value="27" />
-          <entry key="Markdown" value="57" />
-          <entry key="PLAIN_TEXT" value="405" />
-          <entry key="Python" value="735" />
+          <entry key="Markdown" value="149" />
+          <entry key="PLAIN_TEXT" value="447" />
+          <entry key="Python" value="736" />
         </counts>
       </usages-collector>
     </session>
@@ -105,21 +105,12 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index1.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="46">
-              <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/readme.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="115">
-                <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
+              <first_editor relative-caret-position="23">
+                <caret line="1" column="7" lean-forward="true" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
               </first_editor>
               <second_editor />
             </state>
@@ -164,10 +155,10 @@
         <option value="$PROJECT_DIR$/statusCodes/Forbidden.html" />
         <option value="$PROJECT_DIR$/statusCodes/NotFound.html" />
         <option value="$PROJECT_DIR$/snippets.py" />
-        <option value="$PROJECT_DIR$/sandbox2.py" />
         <option value="$PROJECT_DIR$/http_helper.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/index1.html" />
+        <option value="$PROJECT_DIR$/sandbox2.py" />
         <option value="$PROJECT_DIR$/readme.md" />
       </list>
     </option>
@@ -438,7 +429,21 @@
       <option name="project" value="LOCAL" />
       <updated>1542306068917</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="edited index1.html&#10;&#10;Signed-off-by: Itay Feldman &lt;itay1405@gmail.com&gt;">
+      <created>1542306317429</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1542306317429</updated>
+    </task>
+    <task id="LOCAL-00016" summary="changed readme.md&#10;&#10;now it is more stylish&#10;Signed-off-by: Itay Feldman &lt;itay1405@gmail.com&gt;">
+      <created>1542306345538</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1542306345538</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TodoView">
@@ -459,7 +464,7 @@
       <window_info id="Structure" order="2" sideWeight="0.5011013" side_tool="true" weight="0.2576" />
       <window_info id="DB Browser" order="3" weight="0.3296" />
       <window_info anchor="bottom" id="Python Console" order="0" sideWeight="0.4992" weight="0.32929516" />
-      <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.50133336" side_tool="true" weight="0.32929516" />
+      <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.50133336" side_tool="true" weight="0.2852423" />
       <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4992" visible="true" weight="0.22004357" />
       <window_info anchor="bottom" id="Terminal" order="3" sideWeight="0.49866667" weight="0.32929516" />
       <window_info anchor="bottom" x="-399" y="477" width="1875" height="299" id="TODO" order="4" sideWeight="0.49866667" weight="0.32929516" />
@@ -469,7 +474,7 @@
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
       <window_info anchor="bottom" id="DB Execution Console" order="10" />
-      <window_info anchor="bottom" x="1" y="29" width="1919" height="1017" id="Version Control" order="11" sideWeight="0.49973333" visible="true" weight="0.2852423" />
+      <window_info anchor="bottom" x="1" y="29" width="1919" height="1017" id="Version Control" order="11" sideWeight="0.49866667" visible="true" weight="0.2852423" />
       <window_info anchor="right" id="R Graphics" order="0" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="R Packages" order="2" />
@@ -543,7 +548,8 @@
     <MESSAGE value="Added some comments and TODOs&#10;&#10;Signed-off-by: Itay Feldman &lt;itay1405@gmail.com&gt;" />
     <MESSAGE value="updated .gitattributes&#10;&#10;Signed-off-by: Itay Feldman &lt;itay1405@gmail.com&gt;" />
     <MESSAGE value="edited index1.html&#10;&#10;Signed-off-by: Itay Feldman &lt;itay1405@gmail.com&gt;" />
-    <option name="LAST_COMMIT_MESSAGE" value="edited index1.html&#10;&#10;Signed-off-by: Itay Feldman &lt;itay1405@gmail.com&gt;" />
+    <MESSAGE value="changed readme.md&#10;&#10;now it is more stylish&#10;Signed-off-by: Itay Feldman &lt;itay1405@gmail.com&gt;" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed readme.md&#10;&#10;now it is more stylish&#10;Signed-off-by: Itay Feldman &lt;itay1405@gmail.com&gt;" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/NotFound.html" />
@@ -554,9 +560,6 @@
     <entry file="file://$PROJECT_DIR$/logs/http_server_2018-11-09.log" />
     <entry file="file://$PROJECT_DIR$/hello.csv" />
     <entry file="file://$PROJECT_DIR$/exceptions/forbidden.txt" />
-    <entry file="file://$PROJECT_DIR$/logs/http_server_2018-11-04.log">
-      <provider selected="true" editor-type-id="LogFileEditorProvider" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/sandbox.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -575,23 +578,6 @@
       <provider selected="true" editor-type-id="LogFileEditorProvider">
         <state relative-caret-position="-938">
           <caret line="154" column="77" selection-start-line="154" selection-start-column="73" selection-end-line="154" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web_server1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="13" selection-start-column="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/http_helper.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="176" column="20" selection-start-line="176" selection-start-column="20" selection-end-line="176" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -625,13 +611,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sandbox2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="445">
-          <caret line="39" selection-start-line="39" selection-end-line="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index1.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="46">
@@ -639,11 +618,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/sandbox2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="445">
+          <caret line="39" selection-start-line="39" selection-end-line="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logs/http_server_2018-11-04.log">
+      <provider selected="true" editor-type-id="LogFileEditorProvider" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/http_helper.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="359">
+          <caret line="176" column="20" selection-start-line="176" selection-start-column="20" selection-end-line="176" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web_server1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="13" selection-start-column="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/readme.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="115">
-            <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
+          <first_editor relative-caret-position="23">
+            <caret line="1" column="7" lean-forward="true" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
           </first_editor>
           <second_editor />
         </state>
