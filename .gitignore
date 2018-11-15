@@ -2,7 +2,6 @@
 .gitignore
 .gitattributes
 uploads/
-index1.html
 index.html
 # Ignore log files, log files are auto generated
 # *.log
