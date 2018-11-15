@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="faef416b-b0b1-4556-abbd-064649831357" name="Default" comment="Added some comments and TODOs&#10;&#10;Signed-off-by: Itay Feldman &lt;itay1405@gmail.com&gt;">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+    <list default="true" id="faef416b-b0b1-4556-abbd-064649831357" name="Default" comment="updated .gitattributes&#10;&#10;Signed-off-by: Itay Feldman &lt;itay1405@gmail.com&gt;">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index1.html" beforeDir="false" afterPath="$PROJECT_DIR$/index1.html" afterDir="false" />
     </list>
     <list id="d6285c01-bc3f-40e0-864f-4b55e9a1966a" name="Revert: Second, commit, testing stuff" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,6 +27,7 @@
         <counts>
           <entry key="gitattributes" value="1" />
           <entry key="gitignore" value="4" />
+          <entry key="html" value="1" />
           <entry key="log" value="1" />
           <entry key="md" value="1" />
           <entry key="py" value="1" />
@@ -35,6 +37,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Git file" value="4" />
+          <entry key="HTML" value="1" />
           <entry key="Log" value="1" />
           <entry key="Markdown" value="1" />
           <entry key="PLAIN_TEXT" value="1" />
@@ -45,14 +48,16 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="gitignore" value="89" />
+          <entry key="html" value="27" />
           <entry key="py" value="735" />
-          <entry key="txt" value="357" />
+          <entry key="txt" value="383" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Git file" value="89" />
-          <entry key="PLAIN_TEXT" value="357" />
+          <entry key="HTML" value="27" />
+          <entry key="PLAIN_TEXT" value="383" />
           <entry key="Python" value="735" />
         </counts>
       </usages-collector>
@@ -92,41 +97,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sandbox2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="897">
+            <state relative-caret-position="445">
               <caret line="39" selection-start-line="39" selection-end-line="39" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
+        <entry file="file://$PROJECT_DIR$/index1.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="46">
-              <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/readme.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="345">
-                <caret line="15" column="84" selection-start-line="15" selection-start-column="84" selection-end-line="15" selection-end-column="84" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/snippets.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="16" column="5" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
-              <folding>
-                <element signature="e#0#13#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="161">
+              <caret line="7" selection-start-line="7" selection-end-line="7" />
             </state>
           </provider>
         </entry>
@@ -173,6 +154,7 @@
         <option value="$PROJECT_DIR$/readme.md" />
         <option value="$PROJECT_DIR$/http_helper.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/index1.html" />
       </list>
     </option>
   </component>
@@ -211,9 +193,9 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="add_unversioned_files" value="$PROJECT_DIR$/.gitignore&#10;D:/Documents/Python/Python_2/Projects/http/trying_git/webroot/logs/http_server_2018-11-04.log" />
+    <property name="add_unversioned_files" value="$PROJECT_DIR$/.gitignore&#10;D:/Documents/Python/Python_2/Projects/http/trying_git/webroot/logs/http_server_2018-11-04.log&#10;D:/Documents/Python/Python_2/Projects/http/trying_git/webroot/index1.html" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="MTConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -414,7 +396,14 @@
       <option name="project" value="LOCAL" />
       <updated>1542056615541</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="updated .gitattributes&#10;&#10;Signed-off-by: Itay Feldman &lt;itay1405@gmail.com&gt;">
+      <created>1542301962785</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1542301962785</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TodoView">
@@ -431,7 +420,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" sideWeight="0.5027933" side_tool="true" weight="0.26304692" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.49720672" visible="true" weight="0.2656" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.49720672" visible="true" weight="0.25813332" />
       <window_info id="Structure" order="2" sideWeight="0.5011013" side_tool="true" weight="0.2576" />
       <window_info id="DB Browser" order="3" weight="0.3296" />
       <window_info anchor="bottom" id="Python Console" order="0" sideWeight="0.4992" weight="0.32929516" />
@@ -445,7 +434,7 @@
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
       <window_info anchor="bottom" id="DB Execution Console" order="10" />
-      <window_info anchor="bottom" x="1" y="29" width="1919" height="1017" id="Version Control" order="11" sideWeight="0.49973333" visible="true" weight="0.3270925" />
+      <window_info anchor="bottom" x="1" y="29" width="1919" height="1017" id="Version Control" order="11" sideWeight="0.49973333" visible="true" weight="0.2852423" />
       <window_info anchor="right" id="R Graphics" order="0" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="R Packages" order="2" />
@@ -517,7 +506,8 @@
     <MESSAGE value="Bug fix" />
     <MESSAGE value="Added some comments and TODOs" />
     <MESSAGE value="Added some comments and TODOs&#10;&#10;Signed-off-by: Itay Feldman &lt;itay1405@gmail.com&gt;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added some comments and TODOs&#10;&#10;Signed-off-by: Itay Feldman &lt;itay1405@gmail.com&gt;" />
+    <MESSAGE value="updated .gitattributes&#10;&#10;Signed-off-by: Itay Feldman &lt;itay1405@gmail.com&gt;" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated .gitattributes&#10;&#10;Signed-off-by: Itay Feldman &lt;itay1405@gmail.com&gt;" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/NotFound.html" />
@@ -528,16 +518,6 @@
     <entry file="file://$PROJECT_DIR$/logs/http_server_2018-11-09.log" />
     <entry file="file://$PROJECT_DIR$/hello.csv" />
     <entry file="file://$PROJECT_DIR$/exceptions/forbidden.txt" />
-    <entry file="file://$PROJECT_DIR$/readme.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="345">
-            <caret line="15" column="84" selection-start-line="15" selection-start-column="84" selection-end-line="15" selection-end-column="84" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/logs/http_server_2018-11-04.log">
       <provider selected="true" editor-type-id="LogFileEditorProvider" />
     </entry>
@@ -549,13 +529,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/favicon.ico">
       <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sandbox2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="897">
-          <caret line="39" selection-start-line="39" selection-end-line="39" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/logs/http_server_2018-11-15.log">
       <provider editor-type-id="text-editor">
@@ -599,6 +572,23 @@
     <entry file="file://$PROJECT_DIR$/.gitattributes">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/readme.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="207">
+            <caret line="9" column="12" lean-forward="true" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/snippets.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="368">
@@ -609,10 +599,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/sandbox2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
+        <state relative-caret-position="445">
+          <caret line="39" selection-start-line="39" selection-end-line="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>
