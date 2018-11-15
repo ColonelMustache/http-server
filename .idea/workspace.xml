@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="faef416b-b0b1-4556-abbd-064649831357" name="Default" comment="changed readme.md&#10;&#10;now it is more stylish&#10;Signed-off-by: Itay Feldman &lt;itay1405@gmail.com&gt;">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
     </list>
     <list id="d6285c01-bc3f-40e0-864f-4b55e9a1966a" name="Revert: Second, commit, testing stuff" comment="" />
@@ -49,7 +48,7 @@
         <counts>
           <entry key="gitignore" value="89" />
           <entry key="html" value="27" />
-          <entry key="md" value="149" />
+          <entry key="md" value="227" />
           <entry key="py" value="736" />
           <entry key="txt" value="447" />
         </counts>
@@ -58,7 +57,7 @@
         <counts>
           <entry key="Git file" value="89" />
           <entry key="HTML" value="27" />
-          <entry key="Markdown" value="149" />
+          <entry key="Markdown" value="227" />
           <entry key="PLAIN_TEXT" value="447" />
           <entry key="Python" value="736" />
         </counts>
@@ -110,7 +109,7 @@
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
               <first_editor relative-caret-position="23">
-                <caret line="1" column="7" lean-forward="true" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
+                <caret line="1" column="17" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
               </first_editor>
               <second_editor />
             </state>
@@ -443,7 +442,14 @@
       <option name="project" value="LOCAL" />
       <updated>1542306345538</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="changed readme.md&#10;&#10;now it is more stylish&#10;Signed-off-by: Itay Feldman &lt;itay1405@gmail.com&gt;">
+      <created>1542306841007</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1542306841007</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TodoView">
@@ -649,7 +655,7 @@
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="23">
-            <caret line="1" column="7" lean-forward="true" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
+            <caret line="1" column="17" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
           </first_editor>
           <second_editor />
         </state>
