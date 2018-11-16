@@ -37,8 +37,11 @@ def handle_request(params, client_sock):
 
 # requests handling:
 def handle_get(resource, client_sock):
-    check_exception(resource, client_sock)
-    if not resource and os.path.exists("index.html"):
+    if check_exception(resource, client_sock):
+        pass  # if there's an exception it shouldn't try GET, it was done when it called check_exception()
+    elif webpage_functions(resource, client_sock):
+        pass  # if True, shouldn't do GET
+    elif not resource and os.path.exists("index.html"):
         # first request of default page
         with open("index.html", 'rb') as index_html:
             header = "HTTP/1.1 200 OK\r\n" \
@@ -174,11 +177,70 @@ def check_exception(resource, client_sock):
     moved_temp = check_moved_temp(resource)
     if check_forbidden(resource):
         handle_forbidden(client_sock)
+        return True
     elif moved_temp:
         handle_moved_temp(client_sock, moved_temp)
+        return True
+    return False
 
 
 def handle_internal_error(client_sock):
     header = "HTTP/1.1 500 Internal Server Error\r\n" \
              "\r\n"
     client_sock.send(header)
+
+
+def handle_webpage_functions_result(client_sock, result):
+    header = 'HTTP/1.1 200 OK\r\n' \
+             'Content-Length: {0}\r\n' \
+             '\r\n'.format(len(result))
+    client_sock.send(header)
+    client_sock.send(result)
+
+
+def webpage_functions(resource, client_sock):
+    if '?' not in resource:
+        return False
+    method_name, variables = split_resource(resource)
+    method = check_functions(method_name)
+    if method[0]:
+        result = method[1](variables)
+        handle_webpage_functions_result(client_sock, result)
+        return True
+    return False
+    # if no method exists return nothing and continue main program, will either get a resource or a 404
+
+
+def check_functions(resource):
+    funcs = open('data/siteFuncs', 'r+').read().splitlines()
+    if resource in funcs:
+        resource.replace('-', '_')
+        try:
+            return True, locals()[resource]
+        except KeyError:
+            return False
+    return False
+
+
+def get_vars_from_request(varis):
+    variables = varis.split('&')
+    for var in variables:
+        var.split('=')
+        # TODO remove print
+    print variables
+    return variables
+
+
+def split_resource(resource):
+    resource = resource.split('?')
+    method = resource[0]
+    variables = get_vars_from_request(resource[1])
+    # TODO remove prints
+    print method
+    print variables
+    return method, variables
+
+
+# Webpage functions:
+def calculate_next(num):
+    return num + 1
