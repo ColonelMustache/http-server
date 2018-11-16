@@ -1,2 +1,3 @@
 BLACKLIST
 hello.txt
+.*\.py

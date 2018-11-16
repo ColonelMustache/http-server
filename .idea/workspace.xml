@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="faef416b-b0b1-4556-abbd-064649831357" name="Default" comment="started 4.10&#10;&#10;Signed-off-by: Itay Feldman &lt;itay1405@gmail.com&gt;">
-      <change afterPath="$PROJECT_DIR$/data/allowedToUploadAndEdit" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/other/tests.txt" afterDir="false" />
+    <list default="true" id="faef416b-b0b1-4556-abbd-064649831357" name="Default" comment="finished all up to 4.11&#10;&#10;Signed-off-by: Itay Feldman &lt;itay1405@gmail.com&gt;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exceptions/forbidden.txt" beforeDir="false" afterPath="$PROJECT_DIR$/exceptions/forbidden.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/http_helper.py" beforeDir="false" afterPath="$PROJECT_DIR$/http_helper.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/other/tests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/other/tests.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sandbox2.py" beforeDir="false" afterPath="$PROJECT_DIR$/sandbox2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web_server1.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_server1.py" afterDir="false" />
     </list>
     <list id="d6285c01-bc3f-40e0-864f-4b55e9a1966a" name="Revert: Second, commit, testing stuff" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,12 +19,12 @@
     <session id="-344530527">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
-          <entry key="project.open.time.3" value="2" />
+          <entry key="project.closed" value="4" />
+          <entry key="project.open.time.3" value="3" />
           <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="5" />
+          <entry key="project.opened" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -39,7 +38,7 @@
           <entry key="md" value="3" />
           <entry key="py" value="2" />
           <entry key="siteFuncs" value="1" />
-          <entry key="txt" value="1" />
+          <entry key="txt" value="2" />
           <entry key="xml" value="1" />
         </counts>
       </usages-collector>
@@ -50,7 +49,7 @@
           <entry key="Image" value="2" />
           <entry key="Log" value="2" />
           <entry key="Markdown" value="3" />
-          <entry key="PLAIN_TEXT" value="4" />
+          <entry key="PLAIN_TEXT" value="5" />
           <entry key="Python" value="2" />
           <entry key="XML" value="1" />
         </counts>
@@ -61,9 +60,9 @@
           <entry key="gitignore" value="90" />
           <entry key="html" value="27" />
           <entry key="md" value="227" />
-          <entry key="py" value="5074" />
+          <entry key="py" value="5461" />
           <entry key="siteFuncs" value="6" />
-          <entry key="txt" value="476" />
+          <entry key="txt" value="507" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -71,8 +70,8 @@
           <entry key="Git file" value="90" />
           <entry key="HTML" value="27" />
           <entry key="Markdown" value="227" />
-          <entry key="PLAIN_TEXT" value="487" />
-          <entry key="Python" value="5074" />
+          <entry key="PLAIN_TEXT" value="518" />
+          <entry key="Python" value="5461" />
         </counts>
       </usages-collector>
     </session>
@@ -86,7 +85,7 @@
         <entry file="file://$PROJECT_DIR$/web_server1.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="254">
-              <caret line="14" column="32" lean-forward="true" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
+              <caret line="14" column="32" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -94,30 +93,43 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/http_helper.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="461">
-              <caret line="148" column="26" selection-start-line="148" selection-start-column="26" selection-end-line="148" selection-end-column="26" />
+            <state relative-caret-position="428">
+              <caret line="229" column="23" lean-forward="true" selection-start-line="229" selection-start-column="23" selection-end-line="229" selection-end-column="23" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
-                <marker date="1542381126829" expanded="true" signature="809:1209" ph="..." />
-                <marker date="1542381126829" expanded="true" signature="1885:2182" ph="..." />
-                <marker date="1542381126829" expanded="true" signature="5938:6170" ph="..." />
-                <marker date="1542381126829" expanded="true" signature="6232:6608" ph="..." />
-                <marker date="1542381126829" expanded="true" signature="10642:10647" ph="..." />
-                <marker date="1542381126829" expanded="true" signature="11523:11528" ph="..." />
-                <marker date="1542381126829" expanded="true" signature="11948:12001" ph="..." />
+                <marker date="1542393913111" expanded="true" signature="809:1209" ph="..." />
+                <marker date="1542393913111" expanded="true" signature="1885:2182" ph="..." />
+                <marker date="1542393913111" expanded="true" signature="5938:6170" ph="..." />
+                <marker date="1542393913111" expanded="true" signature="6232:6608" ph="..." />
+                <marker date="1542393913111" expanded="true" signature="8675:8801" ph="..." />
+                <marker date="1542393913111" expanded="true" signature="10927:10932" ph="..." />
+                <marker date="1542393913111" expanded="true" signature="11808:11813" ph="..." />
+                <marker date="1542393913111" expanded="true" signature="12233:12286" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sandbox2.py">
           <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="415">
+              <caret line="72" column="32" selection-start-line="72" selection-start-column="32" selection-end-line="72" selection-end-column="32" />
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/exceptions/forbidden.txt">
+          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="46">
-              <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+              <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -170,6 +182,7 @@
       <find>404</find>
       <find>bad_req</find>
       <find>allower</find>
+      <find>forbi</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -193,9 +206,10 @@
         <option value="$PROJECT_DIR$/data/siteFuncs" />
         <option value="$PROJECT_DIR$/web_server1.py" />
         <option value="$PROJECT_DIR$/other/tests.txt" />
-        <option value="$PROJECT_DIR$/http_helper.py" />
         <option value="$PROJECT_DIR$/data/allowedToUploadAndEdit" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/http_helper.py" />
+        <option value="$PROJECT_DIR$/exceptions/forbidden.txt" />
         <option value="$PROJECT_DIR$/sandbox2.py" />
       </list>
     </option>
@@ -214,13 +228,17 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="webroot" type="b2602c69:ProjectViewProjectNode" />
               <item name="webroot" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webroot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webroot" type="462c0819:PsiDirectoryNode" />
+              <item name="exceptions" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="webroot" type="b2602c69:ProjectViewProjectNode" />
@@ -236,6 +254,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -262,7 +281,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.web_server1">
+  <component name="RunManager" selected="Python.sandbox2">
     <configuration name="http_helper" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="webroot" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -355,8 +374,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.web_server1" />
         <item itemvalue="Python.sandbox2" />
+        <item itemvalue="Python.web_server1" />
         <item itemvalue="Python.http_helper" />
         <item itemvalue="Python.sandbox" />
       </list>
@@ -507,7 +526,14 @@
       <option name="project" value="LOCAL" />
       <updated>1542369835094</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="finished all up to 4.11&#10;&#10;Signed-off-by: Itay Feldman &lt;itay1405@gmail.com&gt;">
+      <created>1542381512373</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1542381512373</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TodoView">
@@ -524,12 +550,12 @@
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" sideWeight="0.5027933" side_tool="true" weight="0.26304692" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.49720672" visible="true" weight="0.2608" />
+      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.49720672" visible="true" weight="0.26346666" />
       <window_info id="Structure" order="2" sideWeight="0.5011013" side_tool="true" weight="0.2576" />
       <window_info id="DB Browser" order="3" weight="0.3296" />
       <window_info anchor="bottom" id="Python Console" order="0" sideWeight="0.4992" weight="0.32929516" />
       <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.50133336" side_tool="true" weight="0.26762116" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49866667" visible="true" weight="0.26762116" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49866667" visible="true" weight="0.26762116" />
       <window_info anchor="bottom" id="Terminal" order="3" sideWeight="0.49866667" weight="0.32929516" />
       <window_info anchor="bottom" x="-399" y="477" width="1875" height="299" id="TODO" order="4" sideWeight="0.49813333" weight="0.32929516" />
       <window_info anchor="bottom" id="Message" order="5" />
@@ -615,7 +641,8 @@
     <MESSAGE value="changed readme.md&#10;&#10;now it is more stylish&#10;Signed-off-by: Itay Feldman &lt;itay1405@gmail.com&gt;" />
     <MESSAGE value="to pull&#10;&#10;Signed-off-by: Itay Feldman &lt;itay1405@gmail.com&gt;" />
     <MESSAGE value="started 4.10&#10;&#10;Signed-off-by: Itay Feldman &lt;itay1405@gmail.com&gt;" />
-    <option name="LAST_COMMIT_MESSAGE" value="started 4.10&#10;&#10;Signed-off-by: Itay Feldman &lt;itay1405@gmail.com&gt;" />
+    <MESSAGE value="finished all up to 4.11&#10;&#10;Signed-off-by: Itay Feldman &lt;itay1405@gmail.com&gt;" />
+    <option name="LAST_COMMIT_MESSAGE" value="finished all up to 4.11&#10;&#10;Signed-off-by: Itay Feldman &lt;itay1405@gmail.com&gt;" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/NotFound.html" />
@@ -625,7 +652,6 @@
     <entry file="file://$PROJECT_DIR$/exceptions/forbidden" />
     <entry file="file://$PROJECT_DIR$/logs/http_server_2018-11-09.log" />
     <entry file="file://$PROJECT_DIR$/hello.csv" />
-    <entry file="file://$PROJECT_DIR$/exceptions/forbidden.txt" />
     <entry file="file://$PROJECT_DIR$/sandbox.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -651,7 +677,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index1.html" />
     <entry file="file://$PROJECT_DIR$/readme.md">
-      <provider editor-type-id="text-editor" />
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="23">
@@ -660,32 +685,16 @@
           <second_editor />
         </state>
       </provider>
+      <provider editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/logs/http_server_2018-11-04.log">
-      <provider editor-type-id="text-editor" />
       <provider selected="true" editor-type-id="LogFileEditorProvider" />
+      <provider editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/snippets.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="461">
           <caret line="38" column="17" lean-forward="true" selection-start-line="38" selection-start-column="17" selection-end-line="38" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/siteFuncs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="5" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web_server1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="14" column="32" lean-forward="true" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -703,9 +712,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/upload/russian-president-vladimir-putin-2012-billboard-650.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/upload/russian-president-vladimir-putin-2012-billboard-650.jpg" />
     <entry file="file://$PROJECT_DIR$/upload/abstract.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -716,23 +723,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/http_helper.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="461">
-          <caret line="148" column="26" selection-start-line="148" selection-start-column="26" selection-end-line="148" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-            <marker date="1542381126829" expanded="true" signature="809:1209" ph="..." />
-            <marker date="1542381126829" expanded="true" signature="1885:2182" ph="..." />
-            <marker date="1542381126829" expanded="true" signature="5938:6170" ph="..." />
-            <marker date="1542381126829" expanded="true" signature="6232:6608" ph="..." />
-            <marker date="1542381126829" expanded="true" signature="10642:10647" ph="..." />
-            <marker date="1542381126829" expanded="true" signature="11523:11528" ph="..." />
-            <marker date="1542381126829" expanded="true" signature="11948:12001" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/logs/http_server_2018-11-16.log">
       <provider selected="true" editor-type-id="LogFileEditorProvider">
         <state relative-caret-position="116">
@@ -740,10 +730,55 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sandbox2.py">
+    <entry file="file://$PROJECT_DIR$/web_server1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="14" column="32" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/siteFuncs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="46">
-          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+          <caret line="2" column="5" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sandbox2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="415">
+          <caret line="72" column="32" selection-start-line="72" selection-start-column="32" selection-end-line="72" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/exceptions/forbidden.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/http_helper.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="428">
+          <caret line="229" column="23" lean-forward="true" selection-start-line="229" selection-start-column="23" selection-end-line="229" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+            <marker date="1542393913111" expanded="true" signature="809:1209" ph="..." />
+            <marker date="1542393913111" expanded="true" signature="1885:2182" ph="..." />
+            <marker date="1542393913111" expanded="true" signature="5938:6170" ph="..." />
+            <marker date="1542393913111" expanded="true" signature="6232:6608" ph="..." />
+            <marker date="1542393913111" expanded="true" signature="8675:8801" ph="..." />
+            <marker date="1542393913111" expanded="true" signature="10927:10932" ph="..." />
+            <marker date="1542393913111" expanded="true" signature="11808:11813" ph="..." />
+            <marker date="1542393913111" expanded="true" signature="12233:12286" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

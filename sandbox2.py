@@ -1,4 +1,5 @@
 import csv
+import re
 
 with open('other/tests.txt', 'a+') as fh:
     # print fh.readline()
@@ -60,3 +61,14 @@ if 2:
 with open('other/tests.txt', 'a+') as fh:
     # fh.read()
     fh.write('supp\n')
+
+
+def resource_is_in_forbidden(resource, files):
+    for item in files:
+        search_object = re.search(item, resource)
+        if search_object:
+            return True
+
+
+if resource_is_in_forbidden('ht.py', open('exceptions/forbidden.txt', 'r+').read().splitlines()):
+    print 'HELLO'

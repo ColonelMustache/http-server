@@ -201,6 +201,7 @@ def get_content_type(file_name):
 
 
 def check_forbidden(resource):
+    # TODO add regex options to exclude all files with a certain attribute, i.e *.py to exclude all python files
     if resource == 'exceptions/forbidden.txt':
         return True
     with open('exceptions/forbidden.txt', 'rb+') as forbidden:
@@ -220,6 +221,13 @@ def check_forbidden(resource):
                   'file must start like so: "*type*(whitelist | blacklist):"\n' \
                   'Responding with "not forbidden"'
             return False
+
+
+def resource_is_in_forbidden(resource, files):
+    for item in files:
+        search_object = re.search(item, resource)
+        if search_object:
+            return True
 
 
 def handle_forbidden(client_sock):
