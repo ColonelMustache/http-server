@@ -7,7 +7,7 @@ with open('textfile.txt', 'a+') as fh:
 
 list_thing = ['hello.txt']
 s = 'hello.txt'
-if s in l:
+if s in list_thing:
     # print 'pygay'
     pass
 dit = {
@@ -25,7 +25,7 @@ def stuff():
 
 
 # stuff()
-
+"""
 with open('moved_temp.csv', 'rb') as files_dict:
     reader = csv.reader(files_dict)
     new_dict = {}
@@ -35,5 +35,18 @@ with open('moved_temp.csv', 'rb') as files_dict:
 print new_dict
 
 print "hello"
-
+"""
 # shlomo coosomo
+
+
+def hello():
+    print 'hello!'
+
+string = "hellols"
+string = string.split('l')
+print string
+
+string = raw_input()
+method = locals()[string]
+if method:
+    method()
