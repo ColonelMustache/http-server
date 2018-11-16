@@ -15,32 +15,55 @@ def get_request(request):
     return False
 
 
+def get_headers(request):
+    headers = ['content_length', 'content_type']
+    headers_values = parse_separate_headers(request)
+    return dict((headers[i], headers_values[i]) for i in range(0, len(headers_values)))
+
+
+def parse_separate_headers(request):
+    content_length = re.search('Content-Length: (.*)\r\n', request)
+    content_type = re.search('Content-Type: (.*)\r\n', request)
+    headers_values = [content_length, content_type]
+    for i in range(0, len(headers_values)):
+        try:
+            headers_values[i] = headers_values[i].group(1)
+        except AttributeError:
+            headers_values[i] = 'empty'
+    return headers_values
+
+
 def bad_request(client_sock):
-    # print '400 Bad Request'
-    # print full_request
-    # with open('BadRequest.html', 'r+') as bad_request_html:
-        # client_sock.sendall(bad_request_html.read())
     header = "HTTP/1.1 400 Bad Request\r\n"
     client_sock.send(header)
 
 
-def handle_request(params, client_sock):
+def handle_request(params, client_sock, headers):
     # params = [full request, request type, resource, http version] <=> [0, 1, 2, 3]
     request = params[1]  # i.e GET
     if request == 'GET':
         handle_get(params[2].strip('/'), client_sock)
     elif request == 'POST':
-        handle_post()
+        handle_post(params[2].strip('/'), client_sock, headers)
     else:
         handle_internal_error(client_sock)
 
 
+def handle_others_on_get(resource, client_sock):
+    exceptions_header = check_exception(resource, client_sock)
+    webpage_functions_header = webpage_functions(resource, client_sock)
+    headers_list = [exceptions_header, webpage_functions_header]
+    for header in headers_list:
+        if header:
+            return header
+    return False
+
+
 # requests handling:
 def handle_get(resource, client_sock):
-    if check_exception(resource, client_sock):
-        pass  # if there's an exception it shouldn't try GET, it was done when it called check_exception()
-    elif webpage_functions(resource, client_sock):
-        pass  # if True, shouldn't do GET
+    base_header = handle_others_on_get(resource, client_sock)
+    if base_header:
+        header = base_header
     elif not resource and os.path.exists("index.html"):
         # first request of default page
         with open("index.html", 'rb') as index_html:
@@ -53,11 +76,10 @@ def handle_get(resource, client_sock):
     elif os.path.exists(full_running_dir + resource):
         # send the requested resource
         with open(resource, 'rb+') as requested_resource:
-            # print "resource:", resource
             header = "HTTP/1.1 200 OK\r\n" \
                      "Content-Length: {0}\r\n" \
                      "Content-Type: {1}\r\n" \
-                     "\r\n".format(len(open(resource, 'rb').read()), get_content_type(resource))  # str(os.stat(resource).st_size)
+                     "\r\n".format(len(open(resource, 'rb').read()), get_content_type(resource))
             client_sock.send(header)
             client_sock.sendall(requested_resource.read())
     else:
@@ -78,8 +100,11 @@ def handle_get(resource, client_sock):
     log_to_file(' | '.join(header.strip('\r\n').split('\r\n')), 'localhost, 80')
 
 
-def handle_post():
-    pass
+def handle_post(request, client_sock, headers):
+    content_length = int(headers['content_length'])  # *int!*
+    destination, variables = split_resource(request)
+    # print "length:", content_length
+    # print content_length, destination, variables, 'HELLO'
 
 
 def log_to_file(to_log, address):
@@ -89,14 +114,12 @@ def log_to_file(to_log, address):
     with open('logs/http_server_{0}.log'.format(date), 'a+') as log_file:
         log_time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         log_msg = str(address) + ' - [%s] \"%s\"\n' % (log_time, to_log.strip('\r\n'))
-        # print log_msg
         log_file.write(log_msg)
 
 
 def get_content_type(file_name):
     search_object = re.search('.*\.(\w*)', file_name)
     file_type = search_object.group(1).upper()
-    # print file_type
     if file_type == 'TXT' or file_type == 'HTML':
         content_type = 'text/html; charset=UTF-8'
     elif file_type == 'JPG' or file_type == 'JPEG':
@@ -118,14 +141,12 @@ def get_content_type(file_name):
 
 
 def check_forbidden(resource):
-    # print resource
     if resource == 'exceptions/forbidden.txt':
         return True
     with open('exceptions/forbidden.txt', 'rb+') as forbidden:
         data = forbidden.read().splitlines()
         exception_type = data[0]
         files = data[1:]
-        # print files
         if exception_type.upper() == 'WHITELIST':
             if resource in files:
                 return False
@@ -150,6 +171,7 @@ def handle_forbidden(client_sock):
                  "\r\n" % len(open("statusCodes/Forbidden.html", 'rb').read())
         client_sock.send(header)
         client_sock.sendall(forbidden.read())
+    return header
 
 
 def check_moved_temp(resource):
@@ -165,8 +187,6 @@ def check_moved_temp(resource):
 
 
 def handle_moved_temp(client_sock, new_location):
-    # TODO if moved function returns: True, *new_location* = true, resource was moved; *new_location*, the new location
-    # TODO if not moved function returns: False, '' = false, not moved; '', empty string so there won't be an IndexError
     header = "HTTP/1.1 302 Moved Temporarily\r\n" \
              "Location: {0}\r\n" \
              "\r\n".format(new_location)
@@ -176,8 +196,7 @@ def handle_moved_temp(client_sock, new_location):
 def check_exception(resource, client_sock):
     moved_temp = check_moved_temp(resource)
     if check_forbidden(resource):
-        handle_forbidden(client_sock)
-        return True
+        return handle_forbidden(client_sock)
     elif moved_temp:
         handle_moved_temp(client_sock, moved_temp)
         return True
@@ -190,23 +209,14 @@ def handle_internal_error(client_sock):
     client_sock.send(header)
 
 
-def handle_webpage_functions_result(client_sock, result):
-    header = 'HTTP/1.1 200 OK\r\n' \
-             'Content-Length: {0}\r\n' \
-             '\r\n'.format(len(result))
-    client_sock.send(header)
-    client_sock.send(result)
-
-
 def webpage_functions(resource, client_sock):
     if '?' not in resource:
         return False
     method_name, variables = split_resource(resource)
     method = check_functions(method_name)
     if method[0]:
-        result = method[1](variables)
-        handle_webpage_functions_result(client_sock, result)
-        return True
+        header = method[1](variables, client_sock)
+        return header
     return False
     # if no method exists return nothing and continue main program, will either get a resource or a 404
 
@@ -214,9 +224,9 @@ def webpage_functions(resource, client_sock):
 def check_functions(resource):
     funcs = open('data/siteFuncs', 'r+').read().splitlines()
     if resource in funcs:
-        resource.replace('-', '_')
+        resource = resource.replace('-', '_')
         try:
-            return True, locals()[resource]
+            return True, globals()[resource]
         except KeyError:
             return False
     return False
@@ -224,23 +234,56 @@ def check_functions(resource):
 
 def get_vars_from_request(varis):
     variables = varis.split('&')
-    for var in variables:
-        var.split('=')
-        # TODO remove print
-    print variables
-    return variables
+    for i in range(0, len(variables)):
+        variables[i] = variables[i].split('=')
+    return dict(variables)
 
 
 def split_resource(resource):
     resource = resource.split('?')
     method = resource[0]
     variables = get_vars_from_request(resource[1])
-    # TODO remove prints
-    print method
-    print variables
     return method, variables
 
 
-# Webpage functions:
-def calculate_next(num):
-    return num + 1
+"""
+ALL BELOW ARE FUNCTIONS CALLED UPON BY A 'GET' REQUEST
+DO NOT PUT ANYTHING ELSE HERE
+"""
+
+
+def calculate_next(variables, client_sock):
+    num = int(variables['num'])
+    num += 1
+    result = str(num)  # result has to be string to be sent to the client correctly
+    header = "HTTP/1.1 200 OK\r\n" \
+             "Content-Length: {0}\r\n" \
+             "\r\n".format(len(result))
+    client_sock.send(header)
+    client_sock.send(result)
+    return header
+
+
+def calculate_area(variables, client_sock):
+    height = int(variables['height'])
+    width = int(variables['width'])
+    area = (height * width) / 2
+    result = str(area)
+    header = "HTTP/1.1 200 OK\r\n" \
+             "Content-Length: {0}\r\n" \
+             "\r\n".format(len(result))
+    client_sock.send(header)
+    client_sock.send(result)
+    return header
+
+
+def image(variables, client_sock):
+    image_name = variables['image-name']
+    with open(image_name, 'rb+') as requested_resource:
+        header = "HTTP/1.1 200 OK\r\n" \
+                 "Content-Length: {0}\r\n" \
+                 "Content-Type: {1}\r\n" \
+                 "\r\n".format(len(open(image_name, 'rb').read()), get_content_type(image_name))
+        client_sock.send(header)
+        client_sock.sendall(requested_resource.read())
+    return header

@@ -42,11 +42,16 @@ print "hello"
 def hello():
     print 'hello!'
 
+
 string = "hellols"
 string = string.split('l')
 print string
 
-string = raw_input()
-method = locals()[string]
-if method:
-    method()
+#string = raw_input()
+#method = locals()[string]
+#if method:
+  #  method()
+
+string = 'hello!'
+string = string.replace('s', 'l')
+print string

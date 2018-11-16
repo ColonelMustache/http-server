@@ -28,3 +28,12 @@ log_msg = str(client_address) + ' - [%s] \"%s\"\n' % (log_time, request_http[0].
 # "Content-Length: %d\r\n"
 # "Content-Type: text/html; charset=UTF-8\r\n"
 # "\r\n" % os.stat("NotFound.html").st_size)
+
+
+def handle_webpage_functions_result(client_sock, result):
+    header = 'HTTP/1.1 200 OK\r\n' \
+             'Content-Length: {0}\r\n' \
+             '\r\n'.format(len(result))
+    client_sock.send(header)
+    client_sock.send(result)
+    return header
