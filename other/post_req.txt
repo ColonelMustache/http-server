@@ -1,0 +1,14 @@
+POST /upload?file-name=abstract.jpg HTTP/1.1
+Host: localhost
+Connection: keep-alive
+Content-Length: 37193
+Accept: */*
+Origin: http://localhost
+X-Requested-With: XMLHttpRequest
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36
+DNT: 1
+Content-Type: text/plain
+Referer: http://localhost/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: he-IL,he;q=0.9,en-US;q=0.8,en;q=0.7
+Cookie: username-localhost-8888="2|1:0|10:1540636307|23:username-localhost-8888|44:YzU2ZDM0NjkzZDc0NGUwNWE4OTU1NWQ5MmNjYjE0MzI=|84a2137e5b3a67439b573ba3df3c89b8b924fa71b21b0769a87dccafb74a0cde"; _xsrf=2|13d2b88d|3eed6ee85ef2141f79df4bc1b0d48014|1540636307; Pycharm-9ac397f6=5d00cb5c-b387-42c7-85e9-0eba31cb21d7

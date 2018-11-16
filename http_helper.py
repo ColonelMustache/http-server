@@ -34,17 +34,19 @@ def parse_separate_headers(request):
 
 
 def bad_request(client_sock):
-    header = "HTTP/1.1 400 Bad Request\r\n"
+    header = "HTTP/1.1 400 Bad Request\r\n" \
+             "\r\n"
     client_sock.send(header)
+    log_to_file(' | '.join(header.strip('\r\n').split('\r\n')), 'localhost, 80')
 
 
-def handle_request(params, client_sock, headers):
+def handle_request(params, client_sock, headers, extra_data):
     # params = [full request, request type, resource, http version] <=> [0, 1, 2, 3]
     request = params[1]  # i.e GET
     if request == 'GET':
         handle_get(params[2].strip('/'), client_sock)
     elif request == 'POST':
-        handle_post(params[2].strip('/'), client_sock, headers)
+        handle_post(params[2].strip('/'), client_sock, headers, extra_data)
     else:
         handle_internal_error(client_sock)
 
@@ -86,7 +88,7 @@ def handle_get(resource, client_sock):
         # 404 page not found
         with open("statusCodes/NotFound.html", 'rb') as not_found_html:
             header = "HTTP/1.1 404 Not Found\r\n" \
-                     "Content-Length: {0}" \
+                     "Content-Length: {0}\r\n" \
                      "Content-Type: text/html; charset=UTF-8\r\n" \
                      "\r\n".format(len(open('statusCodes/NotFound.html', 'rb').read()))
 
@@ -100,11 +102,69 @@ def handle_get(resource, client_sock):
     log_to_file(' | '.join(header.strip('\r\n').split('\r\n')), 'localhost, 80')
 
 
-def handle_post(request, client_sock, headers):
-    content_length = int(headers['content_length'])  # *int!*
+def handle_post(request, client_sock, headers, extra_data):
+    try:
+        content_length = int(headers['content_length'])  # *int!*
+    except ValueError:
+        # no content length header
+        content_length = False
     destination, variables = split_resource(request)
     # print "length:", content_length
     # print content_length, destination, variables, 'HELLO'
+    file_contents = extra_data
+    if os.path.exists(destination) and check_allowed_upload(destination, variables['file-name']):
+        with open(destination + '/' + variables['file-name'], 'wb+') as new_file:
+            if content_length:
+                file_contents += get_file_content_from_post(client_sock, content_length - len(extra_data))
+            else:
+                file_contents += get_file_content_from_post(client_sock, False)
+            new_file.write(file_contents)
+            header = "HTTP/1.1 201 Created\r\n" \
+                     "\r\n"
+            client_sock.send(header)
+            client_sock.send('Success!')
+            log_to_file(' | '.join(header.strip('\r\n').split('\r\n')), 'localhost, 80')
+
+
+def check_allowed_upload(folder, file_name):
+    """
+    Checks if a file should be allowed access to. For security reasons.
+    :param folder:
+    :param file_name:
+    :return:
+    """
+    full_dir = folder + '/' + file_name
+    if os.path.isfile(full_dir):
+        if full_dir in open('data/allowedToUploadAndEdit', 'r').read().splitlines():
+            return True
+        return False
+    else:
+        if check_is_in_allowed_files(full_dir):
+            open('data/allowedToUploadAndEdit', 'a+').write(full_dir + '\n')  # added to legal files
+    return True  # if file doesnt exist it is ok
+
+
+def check_is_in_allowed_files(file_to_check):
+    with open('data/allowedToUploadAndEdit', 'a+') as allowed_files:
+        allowed_files_list = allowed_files.read().splitlines()
+        if file_to_check not in allowed_files_list:
+            return True
+        return False
+
+
+def get_file_content_from_post(client_sock, left_data_length):
+    data = ''
+    if left_data_length:
+        while len(data) < left_data_length:
+            new_data = client_sock.recv(4096)
+            data += new_data
+    else:
+        while True:
+            new_data = client_sock.recv(4096)
+            if not new_data:
+                break
+            data += new_data
+    return data  # all of the rest of the data of the file
 
 
 def log_to_file(to_log, address):
@@ -278,12 +338,16 @@ def calculate_area(variables, client_sock):
 
 
 def image(variables, client_sock):
-    image_name = variables['image-name']
-    with open(image_name, 'rb+') as requested_resource:
-        header = "HTTP/1.1 200 OK\r\n" \
-                 "Content-Length: {0}\r\n" \
-                 "Content-Type: {1}\r\n" \
-                 "\r\n".format(len(open(image_name, 'rb').read()), get_content_type(image_name))
-        client_sock.send(header)
-        client_sock.sendall(requested_resource.read())
-    return header
+    if not os.path.exists('upload'):
+        os.mkdir('upload/')
+    image_name = 'upload/' + variables['image-name']
+    if os.path.isfile(image_name):
+        with open(image_name, 'rb+') as requested_resource:
+            header = "HTTP/1.1 200 OK\r\n" \
+                     "Content-Length: {0}\r\n" \
+                     "Content-Type: {1}\r\n" \
+                     "\r\n".format(len(open(image_name, 'rb').read()), get_content_type(image_name))
+            client_sock.send(header)
+            client_sock.sendall(requested_resource.read())
+        return header
+    bad_request(client_sock)

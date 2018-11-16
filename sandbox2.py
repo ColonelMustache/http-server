@@ -1,6 +1,6 @@
 import csv
 
-with open('textfile.txt', 'a+') as fh:
+with open('other/tests.txt', 'a+') as fh:
     # print fh.readline()
     # print fh.read().splitlines()
     pass
@@ -8,7 +8,6 @@ with open('textfile.txt', 'a+') as fh:
 list_thing = ['hello.txt']
 s = 'hello.txt'
 if s in list_thing:
-    # print 'pygay'
     pass
 dit = {
     'hello': 1,
@@ -36,22 +35,28 @@ print new_dict
 
 print "hello"
 """
-# shlomo coosomo
 
 
 def hello():
     print 'hello!'
 
 
-string = "hellols"
+string = "hello"
 string = string.split('l')
 print string
 
-#string = raw_input()
-#method = locals()[string]
-#if method:
-  #  method()
+# string = raw_input()
+# method = locals()[string]
+# if method:
+#   method()
 
 string = 'hello!'
 string = string.replace('s', 'l')
 print string
+
+if 2:
+    print '2!'
+
+with open('other/tests.txt', 'a+') as fh:
+    # fh.read()
+    fh.write('supp\n')

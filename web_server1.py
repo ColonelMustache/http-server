@@ -15,10 +15,11 @@ while True:
     request_http = http_helper.get_request(full_request)
     if request_http:  # request valid
         # print request_http[0]
+        data = full_request.split('\r\n\r\n')[1]  # should give me everything after \r\n\r\n, meaning i get all the data
         headers = http_helper.get_headers(full_request)
-        print headers
+        # print headers
         http_helper.log_to_file(request_http[0], ", ".join([str(x) for x in client_address]))
-        http_helper.handle_request(request_http, client_sock, headers)
+        http_helper.handle_request(request_http, client_sock, headers, data)
     else:
         http_helper.bad_request(client_sock)
     client_sock.close()
