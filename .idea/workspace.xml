@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="faef416b-b0b1-4556-abbd-064649831357" name="Default" comment="finished all up to 4.11&#10;&#10;Signed-off-by: Itay Feldman &lt;itay1405@gmail.com&gt;">
+    <list default="true" id="faef416b-b0b1-4556-abbd-064649831357" name="Default" comment="Added regex to forbidden.txt parsing&#10;&#10;Signed-off-by: Itay Feldman &lt;itay1405@gmail.com&gt;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exceptions/forbidden.txt" beforeDir="false" afterPath="$PROJECT_DIR$/exceptions/forbidden.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/http_helper.py" beforeDir="false" afterPath="$PROJECT_DIR$/http_helper.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/other/tests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/other/tests.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sandbox2.py" beforeDir="false" afterPath="$PROJECT_DIR$/sandbox2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_server1.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_server1.py" afterDir="false" />
     </list>
     <list id="d6285c01-bc3f-40e0-864f-4b55e9a1966a" name="Revert: Second, commit, testing stuff" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,12 +16,13 @@
     <session id="-344530527">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="4" />
+          <entry key="project.closed" value="6" />
+          <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.3" value="3" />
-          <entry key="project.open.time.4" value="1" />
+          <entry key="project.open.time.4" value="2" />
           <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="6" />
+          <entry key="project.opened" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -60,9 +58,9 @@
           <entry key="gitignore" value="90" />
           <entry key="html" value="27" />
           <entry key="md" value="227" />
-          <entry key="py" value="5461" />
+          <entry key="py" value="5560" />
           <entry key="siteFuncs" value="6" />
-          <entry key="txt" value="507" />
+          <entry key="txt" value="546" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -70,8 +68,8 @@
           <entry key="Git file" value="90" />
           <entry key="HTML" value="27" />
           <entry key="Markdown" value="227" />
-          <entry key="PLAIN_TEXT" value="518" />
-          <entry key="Python" value="5461" />
+          <entry key="PLAIN_TEXT" value="557" />
+          <entry key="Python" value="5560" />
         </counts>
       </usages-collector>
     </session>
@@ -81,11 +79,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web_server1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="254">
-              <caret line="14" column="32" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
+            <state relative-caret-position="115">
+              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -93,11 +91,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/http_helper.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="428">
-              <caret line="229" column="23" lean-forward="true" selection-start-line="229" selection-start-column="23" selection-end-line="229" selection-end-column="23" />
+            <state relative-caret-position="2332">
+              <caret line="229" column="23" selection-start-line="229" selection-start-column="23" selection-end-line="229" selection-end-column="23" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
                 <marker date="1542393913111" expanded="true" signature="809:1209" ph="..." />
@@ -116,7 +114,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sandbox2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="415">
+            <state relative-caret-position="1633">
               <caret line="72" column="32" selection-start-line="72" selection-start-column="32" selection-end-line="72" selection-end-column="32" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
@@ -204,13 +202,13 @@
         <option value="$PROJECT_DIR$/readme.md" />
         <option value="$PROJECT_DIR$/snippets.py" />
         <option value="$PROJECT_DIR$/data/siteFuncs" />
-        <option value="$PROJECT_DIR$/web_server1.py" />
         <option value="$PROJECT_DIR$/other/tests.txt" />
         <option value="$PROJECT_DIR$/data/allowedToUploadAndEdit" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/http_helper.py" />
         <option value="$PROJECT_DIR$/exceptions/forbidden.txt" />
         <option value="$PROJECT_DIR$/sandbox2.py" />
+        <option value="$PROJECT_DIR$/web_server1.py" />
       </list>
     </option>
   </component>
@@ -533,7 +531,14 @@
       <option name="project" value="LOCAL" />
       <updated>1542381512373</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Added regex to forbidden.txt parsing&#10;&#10;Signed-off-by: Itay Feldman &lt;itay1405@gmail.com&gt;">
+      <created>1542394281433</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1542394281433</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TodoView">
@@ -550,12 +555,12 @@
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" sideWeight="0.5027933" side_tool="true" weight="0.26304692" />
-      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.49720672" visible="true" weight="0.26346666" />
+      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.49720672" visible="true" weight="0.2688" />
       <window_info id="Structure" order="2" sideWeight="0.5011013" side_tool="true" weight="0.2576" />
       <window_info id="DB Browser" order="3" weight="0.3296" />
       <window_info anchor="bottom" id="Python Console" order="0" sideWeight="0.4992" weight="0.32929516" />
-      <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.50133336" side_tool="true" weight="0.26762116" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49866667" visible="true" weight="0.26762116" />
+      <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.50186664" side_tool="true" weight="0.26762116" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49813333" weight="0.26762116" />
       <window_info anchor="bottom" id="Terminal" order="3" sideWeight="0.49866667" weight="0.32929516" />
       <window_info anchor="bottom" x="-399" y="477" width="1875" height="299" id="TODO" order="4" sideWeight="0.49813333" weight="0.32929516" />
       <window_info anchor="bottom" id="Message" order="5" />
@@ -564,7 +569,7 @@
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
       <window_info anchor="bottom" id="DB Execution Console" order="10" />
-      <window_info anchor="bottom" x="1" y="29" width="1919" height="1017" id="Version Control" order="11" sideWeight="0.49813333" weight="0.28414097" />
+      <window_info active="true" anchor="bottom" x="1" y="29" width="1919" height="1017" id="Version Control" order="11" sideWeight="0.49813333" visible="true" weight="0.28414097" />
       <window_info anchor="right" id="R Graphics" order="0" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="R Packages" order="2" />
@@ -642,7 +647,8 @@
     <MESSAGE value="to pull&#10;&#10;Signed-off-by: Itay Feldman &lt;itay1405@gmail.com&gt;" />
     <MESSAGE value="started 4.10&#10;&#10;Signed-off-by: Itay Feldman &lt;itay1405@gmail.com&gt;" />
     <MESSAGE value="finished all up to 4.11&#10;&#10;Signed-off-by: Itay Feldman &lt;itay1405@gmail.com&gt;" />
-    <option name="LAST_COMMIT_MESSAGE" value="finished all up to 4.11&#10;&#10;Signed-off-by: Itay Feldman &lt;itay1405@gmail.com&gt;" />
+    <MESSAGE value="Added regex to forbidden.txt parsing&#10;&#10;Signed-off-by: Itay Feldman &lt;itay1405@gmail.com&gt;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added regex to forbidden.txt parsing&#10;&#10;Signed-off-by: Itay Feldman &lt;itay1405@gmail.com&gt;" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/NotFound.html" />
@@ -677,6 +683,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index1.html" />
     <entry file="file://$PROJECT_DIR$/readme.md">
+      <provider editor-type-id="text-editor" />
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="23">
@@ -685,11 +692,10 @@
           <second_editor />
         </state>
       </provider>
-      <provider editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/logs/http_server_2018-11-04.log">
-      <provider selected="true" editor-type-id="LogFileEditorProvider" />
       <provider editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="LogFileEditorProvider" />
     </entry>
     <entry file="file://$PROJECT_DIR$/snippets.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -730,26 +736,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web_server1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="14" column="32" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/siteFuncs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="5" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sandbox2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="415">
+        <state relative-caret-position="1633">
           <caret line="72" column="32" selection-start-line="72" selection-start-column="32" selection-end-line="72" selection-end-column="32" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
@@ -764,10 +753,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/data/siteFuncs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="5" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/http_helper.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="428">
-          <caret line="229" column="23" lean-forward="true" selection-start-line="229" selection-start-column="23" selection-end-line="229" selection-end-column="23" />
+        <state relative-caret-position="2332">
+          <caret line="229" column="23" selection-start-line="229" selection-start-column="23" selection-end-line="229" selection-end-column="23" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
             <marker date="1542393913111" expanded="true" signature="809:1209" ph="..." />
@@ -778,6 +774,16 @@
             <marker date="1542393913111" expanded="true" signature="10927:10932" ph="..." />
             <marker date="1542393913111" expanded="true" signature="11808:11813" ph="..." />
             <marker date="1542393913111" expanded="true" signature="12233:12286" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web_server1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
           </folding>
         </state>
       </provider>
