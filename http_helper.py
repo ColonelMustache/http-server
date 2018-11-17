@@ -201,7 +201,6 @@ def get_content_type(file_name):
 
 
 def check_forbidden(resource):
-    # TODO add regex options to exclude all files with a certain attribute, i.e *.py to exclude all python files
     if resource == 'exceptions/forbidden.txt':
         return True
     with open('exceptions/forbidden.txt', 'rb+') as forbidden:
