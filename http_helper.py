@@ -112,7 +112,9 @@ def handle_post(request, client_sock, headers, extra_data):
     # print "length:", content_length
     # print content_length, destination, variables, 'HELLO'
     file_contents = extra_data
-    if os.path.exists(destination) and check_allowed_upload(destination, variables['file-name']):
+    if not os.path.exists(destination):
+        os.mkdir(destination)
+    if check_allowed_upload(destination, variables['file-name']):
         with open(destination + '/' + variables['file-name'], 'wb+') as new_file:
             if content_length:
                 file_contents += get_file_content_from_post(client_sock, content_length - len(extra_data))
