@@ -1,7 +1,11 @@
 import csv
 import re
 
-with open('other/tests.txt', 'a+') as fh:
+with open('exceptions/moved_temp.csv', 'r') as fh:
+    print fh.read()
+
+
+with open('etc/tests.txt', 'a+') as fh:
     # print fh.readline()
     # print fh.read().splitlines()
     pass
@@ -58,7 +62,7 @@ print string
 if 2:
     print '2!'
 
-with open('other/tests.txt', 'a+') as fh:
+with open('etc/tests.txt', 'a+') as fh:
     # fh.read()
     fh.write('supp\n')
 

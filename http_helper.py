@@ -66,31 +66,34 @@ def handle_get(resource, client_sock):
     base_header = handle_others_on_get(resource, client_sock)
     if base_header:
         header = base_header
-    elif not resource and os.path.exists("index.html"):
+    elif not resource and os.path.exists(full_running_dir + "index.html"):
         # first request of default page
-        with open("index.html", 'rb') as index_html:
+        with open(full_running_dir + "index.html", 'rb') as index_html:
+            data = index_html.read()
             header = "HTTP/1.1 200 OK\r\n" \
                      "Content-Length: {0}\r\n" \
                      "Content-Type: text/html; charset=UTF-8\r\n" \
-                     "\r\n".format(len(open('./index.html', 'rb').read()))
+                     "\r\n".format(len(data))
             client_sock.send(header)
-            client_sock.sendall(index_html.read())
+            client_sock.sendall(data)
     elif os.path.exists(full_running_dir + resource):
         # send the requested resource
-        with open(resource, 'rb+') as requested_resource:
+        with open(full_running_dir + resource, 'rb+') as requested_resource:
+            data = requested_resource.read()
             header = "HTTP/1.1 200 OK\r\n" \
                      "Content-Length: {0}\r\n" \
                      "Content-Type: {1}\r\n" \
-                     "\r\n".format(len(open(resource, 'rb').read()), get_content_type(resource))
+                     "\r\n".format(len(data), get_content_type(resource))
             client_sock.send(header)
-            client_sock.sendall(requested_resource.read())
+            client_sock.sendall(data)
     else:
         # 404 page not found
-        with open("statusCodes/NotFound.html", 'rb') as not_found_html:
+        with open(full_running_dir + "statusCodes/NotFound.html", 'rb') as not_found_html:
+            data = not_found_html.read()
             header = "HTTP/1.1 404 Not Found\r\n" \
                      "Content-Length: {0}\r\n" \
                      "Content-Type: text/html; charset=UTF-8\r\n" \
-                     "\r\n".format(len(open('statusCodes/NotFound.html', 'rb').read()))
+                     "\r\n".format(len(data))
 
             """There is no Content-Length header because no matter what I do, for some reason, 
             the file the browser receives is smaller than the size I specify which leads
@@ -98,7 +101,7 @@ def handle_get(resource, client_sock):
             that's why format is commented out as well"""
 
             client_sock.send(header)
-            client_sock.sendall(not_found_html.read())
+            client_sock.sendall(data)
     log_to_file(' | '.join(header.strip('\r\n').split('\r\n')), 'localhost, 80')
 
 
@@ -112,10 +115,10 @@ def handle_post(request, client_sock, headers, extra_data):
     # print "length:", content_length
     # print content_length, destination, variables, 'HELLO'
     file_contents = extra_data
-    if not os.path.exists(destination):
+    if not os.path.exists(full_running_dir + destination):
         os.mkdir(destination)
     if check_allowed_upload(destination, variables['file-name']):
-        with open(destination + '/' + variables['file-name'], 'wb+') as new_file:
+        with open(full_running_dir + destination + '/' + variables['file-name'], 'wb+') as new_file:
             if content_length:
                 file_contents += get_file_content_from_post(client_sock, content_length - len(extra_data))
             else:
@@ -136,18 +139,18 @@ def check_allowed_upload(folder, file_name):
     :return:
     """
     full_dir = folder + '/' + file_name
-    if os.path.isfile(full_dir):
-        if full_dir in open('data/allowedToUploadAndEdit', 'r').read().splitlines():
+    if os.path.isfile(full_running_dir + full_dir):
+        if full_dir in open(full_running_dir + 'data/allowedToUploadAndEdit', 'r').read().splitlines():
             return True
         return False
     else:
         if check_is_in_allowed_files(full_dir):
-            open('data/allowedToUploadAndEdit', 'a+').write(full_dir + '\n')  # added to legal files
+            open(full_running_dir + 'data/allowedToUploadAndEdit', 'a+').write(full_dir + '\n')  # added to legal files
     return True  # if file doesnt exist it is ok
 
 
 def check_is_in_allowed_files(file_to_check):
-    with open('data/allowedToUploadAndEdit', 'a+') as allowed_files:
+    with open(full_running_dir + 'data/allowedToUploadAndEdit', 'a+') as allowed_files:
         allowed_files_list = allowed_files.read().splitlines()
         if file_to_check not in allowed_files_list:
             return True
@@ -171,9 +174,9 @@ def get_file_content_from_post(client_sock, left_data_length):
 
 def log_to_file(to_log, address):
     date = datetime.now().date()
-    if not os.path.exists("logs"):
+    if not os.path.exists(full_running_dir + "logs"):
         os.mkdir("./logs")
-    with open('logs/http_server_{0}.log'.format(date), 'a+') as log_file:
+    with open(full_running_dir + 'logs/http_server_{0}.log'.format(date), 'a+') as log_file:
         log_time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         log_msg = str(address) + ' - [%s] \"%s\"\n' % (log_time, to_log.strip('\r\n'))
         log_file.write(log_msg)
@@ -205,7 +208,7 @@ def get_content_type(file_name):
 def check_forbidden(resource):
     if resource == 'exceptions/forbidden.txt':
         return True
-    with open('exceptions/forbidden.txt', 'rb+') as forbidden:
+    with open(full_running_dir + 'exceptions/forbidden.txt', 'rb+') as forbidden:
         data = forbidden.read().splitlines()
         exception_type = data[0]
         files = data[1:]
@@ -233,18 +236,19 @@ def resource_is_in_forbidden(resource, files):
 
 def handle_forbidden(client_sock):
     # code gets here if the file requested was forbidden to access
-    with open("statusCodes/Forbidden.html", 'rb') as forbidden:
+    with open(full_running_dir + "statusCodes/Forbidden.html", 'rb') as forbidden:
+        data = forbidden.read()
         header = "HTTP/1.1 403 Forbidden\r\n" \
                  "Content-Length: %d\r\n" \
                  "Content-Type: text/html; charset=UTF-8\r\n" \
-                 "\r\n" % len(open("statusCodes/Forbidden.html", 'rb').read())
+                 "\r\n" % len(data)
         client_sock.send(header)
-        client_sock.sendall(forbidden.read())
+        client_sock.sendall(data)
     return header
 
 
 def check_moved_temp(resource):
-    with open('exceptions/moved_temp.csv', 'rb') as files_dict:
+    with open(full_running_dir + 'exceptions/moved_temp.csv', 'rb') as files_dict:
         reader = csv.reader(files_dict)
         moved_dict = {}
         for row in reader:
@@ -291,7 +295,8 @@ def webpage_functions(resource, client_sock):
 
 
 def check_functions(resource):
-    funcs = open('data/siteFuncs', 'r+').read().splitlines()
+    with open(full_running_dir + 'data/siteFuncs', 'r+') as fh:
+        funcs = fh.read().splitlines()
     if resource in funcs:
         resource = resource.replace('-', '_')
         try:
@@ -347,16 +352,17 @@ def calculate_area(variables, client_sock):
 
 
 def image(variables, client_sock):
-    if not os.path.exists('upload'):
+    if not os.path.exists(full_running_dir + 'upload'):
         os.mkdir('upload/')
     image_name = 'upload/' + variables['image-name']
-    if os.path.isfile(image_name):
-        with open(image_name, 'rb+') as requested_resource:
+    if os.path.isfile(full_running_dir + image_name):
+        with open(full_running_dir + image_name, 'rb+') as requested_resource:
+            data = requested_resource.read()
             header = "HTTP/1.1 200 OK\r\n" \
                      "Content-Length: {0}\r\n" \
                      "Content-Type: {1}\r\n" \
-                     "\r\n".format(len(open(image_name, 'rb').read()), get_content_type(image_name))
+                     "\r\n".format(len(data), get_content_type(image_name))
             client_sock.send(header)
-            client_sock.sendall(requested_resource.read())
+            client_sock.sendall(data)
         return header
     bad_request(client_sock)
