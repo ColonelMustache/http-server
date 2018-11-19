@@ -26,7 +26,6 @@ def main():
         else:
             http_helper.bad_request(client_sock)
         client_sock.close()
-        print
 
 
 if __name__ == '__main__':

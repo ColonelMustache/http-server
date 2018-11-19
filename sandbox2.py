@@ -1,6 +1,10 @@
 import csv
 import re
 
+with open('exceptions/moved_temp.csv', 'r') as fh:
+    print fh.read()
+
+
 with open('other/tests.txt', 'a+') as fh:
     # print fh.readline()
     # print fh.read().splitlines()
