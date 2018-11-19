@@ -258,6 +258,7 @@ def handle_moved_temp(client_sock, new_location):
              "Location: {0}\r\n" \
              "\r\n".format(new_location)
     client_sock.send(header)
+    return header
 
 
 def check_exception(resource, client_sock):
@@ -265,8 +266,7 @@ def check_exception(resource, client_sock):
     if check_forbidden(resource):
         return handle_forbidden(client_sock)
     elif moved_temp:
-        handle_moved_temp(client_sock, moved_temp)
-        return True
+        return handle_moved_temp(client_sock, moved_temp)
     return False
 
 
