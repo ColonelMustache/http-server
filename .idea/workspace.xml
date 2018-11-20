@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="faef416b-b0b1-4556-abbd-064649831357" name="Default" comment="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;logs/http_server_2018-11-20.log&#10;#&#9;web_server1.py">
+    <list default="true" id="faef416b-b0b1-4556-abbd-064649831357" name="Default" comment="Edited forbidden files list">
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/itay1.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exceptions/forbidden.txt" beforeDir="false" afterPath="$PROJECT_DIR$/exceptions/forbidden.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/allowedToUploadAndEdit" beforeDir="false" afterPath="$PROJECT_DIR$/data/allowedToUploadAndEdit" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/http_helper.py" beforeDir="false" afterPath="$PROJECT_DIR$/http_helper.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/http_server_2018-11-20.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/http_server_2018-11-20.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/textfile.txt" beforeDir="false" />
     </list>
     <list id="d6285c01-bc3f-40e0-864f-4b55e9a1966a" name="Revert: Second, commit, testing stuff" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -117,23 +118,24 @@
     <session id="-828581819">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
+          <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.5" value="2" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="85" />
-          <entry key="py" value="28" />
-          <entry key="txt" value="50" />
+          <entry key="py" value="76" />
+          <entry key="txt" value="107" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="85" />
-          <entry key="PLAIN_TEXT" value="50" />
-          <entry key="Python" value="28" />
+          <entry key="PLAIN_TEXT" value="107" />
+          <entry key="Python" value="76" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -159,7 +161,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web_server1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
+            <state relative-caret-position="69">
               <caret line="4" column="57" selection-start-line="4" selection-start-column="57" selection-end-line="4" selection-end-column="57" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
@@ -168,11 +170,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/http_helper.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="385">
-              <caret line="215" column="33" selection-start-line="215" selection-start-column="33" selection-end-line="215" selection-end-column="33" />
+            <state relative-caret-position="92">
+              <caret line="4" column="36" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -183,17 +185,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/logs/http_server_2018-11-20.log">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-138">
+            <state relative-caret-position="759">
               <caret line="33" selection-start-line="33" selection-end-line="33" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/exceptions/forbidden.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="184">
-              <caret line="8" column="12" lean-forward="true" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
+              <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -250,6 +252,7 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
+        <option value="I F &lt;itay1405@gmail.com&gt;" />
         <option value="Itay &lt;itay1405@gmail.com&gt;" />
         <option value="Itay Feldman &lt;itay1405@gmail.com&gt;" />
       </list>
@@ -271,11 +274,11 @@
         <option value="$PROJECT_DIR$/data/allowedToUploadAndEdit" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/sandbox2.py" />
-        <option value="$PROJECT_DIR$/http_helper.py" />
         <option value="$PROJECT_DIR$/data/port" />
         <option value="$PROJECT_DIR$/web_server1.py" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/exceptions/forbidden.txt" />
+        <option value="$PROJECT_DIR$/http_helper.py" />
       </list>
     </option>
   </component>
@@ -336,7 +339,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.web_server1">
+  <component name="RunManager" selected="Python.http_helper">
     <configuration name="http_helper" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="webroot" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -429,9 +432,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.http_helper" />
         <item itemvalue="Python.web_server1" />
         <item itemvalue="Python.sandbox2" />
-        <item itemvalue="Python.http_helper" />
         <item itemvalue="Python.sandbox" />
       </list>
     </recent_temporary>
@@ -637,7 +640,14 @@
       <option name="project" value="LOCAL" />
       <updated>1542745251608</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Edited forbidden files list">
+      <created>1542745857959</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1542745857959</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TodoView">
@@ -654,13 +664,13 @@
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" sideWeight="0.5027933" side_tool="true" weight="0.26304692" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.49720672" visible="true" weight="0.28486452" />
+      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.49720672" visible="true" weight="0.28486452" />
       <window_info id="Structure" order="2" sideWeight="0.5011013" side_tool="true" weight="0.2576" />
       <window_info id="DB Browser" order="3" weight="0.3296" />
       <window_info anchor="bottom" id="Python Console" order="0" sideWeight="0.4992" weight="0.32929516" />
       <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.50231326" side_tool="true" weight="0.2809316" />
       <window_info anchor="bottom" id="Terminal" order="2" sideWeight="0.49866667" weight="0.32929516" />
-      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49813333" visible="true" weight="0.26628074" />
+      <window_info active="true" anchor="bottom" id="Run" order="3" sideWeight="0.49813333" visible="true" weight="0.26483357" />
       <window_info anchor="bottom" x="-399" y="477" width="1875" height="299" id="TODO" order="4" sideWeight="0.49813333" weight="0.32929516" />
       <window_info anchor="bottom" id="Message" order="5" />
       <window_info anchor="bottom" id="Find" order="6" weight="0.32929516" />
@@ -751,7 +761,8 @@
     <MESSAGE value="Added 'if main: main()' and deleted TODO of adding regex to forbidden check&#10;&#10;Signed-off-by: Itay Feldman &lt;itay1405@gmail.com&gt;" />
     <MESSAGE value="Added 'Enter port' message&#10;&#10;Prevents slight confusion&#10;Signed-off-by: Itay Feldman &lt;itay1405@gmail.com&gt;" />
     <MESSAGE value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;logs/http_server_2018-11-20.log&#10;#&#9;web_server1.py" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;logs/http_server_2018-11-20.log&#10;#&#9;web_server1.py" />
+    <MESSAGE value="Edited forbidden files list" />
+    <option name="LAST_COMMIT_MESSAGE" value="Edited forbidden files list" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/NotFound.html" />
@@ -786,7 +797,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index1.html" />
     <entry file="file://$PROJECT_DIR$/readme.md">
-      <provider editor-type-id="text-editor" />
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="23">
@@ -795,6 +805,7 @@
           <second_editor />
         </state>
       </provider>
+      <provider editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/logs/http_server_2018-11-04.log">
       <provider editor-type-id="text-editor" />
@@ -850,28 +861,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="5" selection-start-line="5" selection-end-line="5" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/textfile.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/http_helper.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="215" column="33" selection-start-line="215" selection-start-column="33" selection-end-line="215" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/textfile.txt" />
     <entry file="file://$PROJECT_DIR$/web_server1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
+        <state relative-caret-position="69">
           <caret line="4" column="57" selection-start-line="4" selection-start-column="57" selection-end-line="4" selection-end-column="57" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
@@ -881,7 +877,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/logs/http_server_2018-11-20.log">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-138">
+        <state relative-caret-position="759">
           <caret line="33" selection-start-line="33" selection-end-line="33" />
         </state>
       </provider>
@@ -892,7 +888,17 @@
     <entry file="file://$PROJECT_DIR$/exceptions/forbidden.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
-          <caret line="8" column="12" lean-forward="true" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
+          <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/http_helper.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="4" column="36" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
