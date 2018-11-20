@@ -3,7 +3,6 @@ import os
 from datetime import datetime
 import csv
 full_running_dir = (os.path.dirname(__file__) + '\\').replace('\\', '/')
-print full_running_dir
 # TODO write DOCSTRING comments for all functions later
 
 

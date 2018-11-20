@@ -1,5 +1,9 @@
 import csv
 import re
+import os
+path = 'C:/Users/itay1/Documents/Python/Projects/http-server/upload/'.replace('/', '\\')
+print path
+print (os.path.exists(path))
 
 with open('exceptions/moved_temp.csv', 'r') as fh:
     print fh.read()
