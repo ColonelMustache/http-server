@@ -2,6 +2,7 @@ import socket
 import http_helper
 # Constants
 try:
+    print 'Enter Port Number(recommended: 80/8080/8081):',
     port = int(raw_input())  # if user enters a valid port set that, else, default is 80
     if port >= 65535 or port <= 0:
         print 'Invalid value for a port, setting port to default (80)...'
