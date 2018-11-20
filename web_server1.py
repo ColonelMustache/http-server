@@ -1,7 +1,14 @@
 import socket
 import http_helper
 # Constants
-to_bind = '0.0.0.0', 8081  # tuple of binding info
+try:
+    port = int(raw_input())  # if user enters a valid port set that, else, default is 80
+    if port >= 65535 or port <= 0:
+        print 'Invalid value for a port, setting port to default (80)...'
+        raise ValueError
+except ValueError:
+    port = 80
+to_bind = '0.0.0.0', port  # tuple of binding info
 
 
 def main():
