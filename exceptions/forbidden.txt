@@ -2,3 +2,8 @@ BLACKLIST
 hello.txt
 .*\.py
 data/.*
+.*\.html
+logs/.*
+js/.*
+.gitignore
+.gitattributes
