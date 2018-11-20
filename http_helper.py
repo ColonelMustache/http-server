@@ -179,7 +179,7 @@ def log_to_file(to_log, address):
     with open(full_running_dir + 'logs/http_server_{0}.log'.format(date), 'a+') as log_file:
         log_time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         log_msg = str(address) + ' - [%s] \"%s\"\n' % (log_time, to_log.strip('\r\n'))
-        log_file.write(log_msg)
+        log_file.write(log_msg.replace('//', '/'))
 
 
 def get_content_type(file_name):
