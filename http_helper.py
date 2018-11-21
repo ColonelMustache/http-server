@@ -163,6 +163,8 @@ def check_is_in_allowed_files(file_to_check):
 
 
 def save_file_from_post(client_sock, left_data_length, file_to_save):
+    if left_data_length > 20000000:  # 20MB
+        client_sock.send('Uploading...')
     with open(file_to_save, 'ab+') as file_from_post:
         data_counter = 0
         if left_data_length:
