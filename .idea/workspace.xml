@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="faef416b-b0b1-4556-abbd-064649831357" name="Default" comment="Minor bug fix">
+    <list default="true" id="faef416b-b0b1-4556-abbd-064649831357" name="Default" comment="Changed logging function&#10;&#10;'//' is now replaced with '/'">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/allowedToUploadAndEdit" beforeDir="false" afterPath="$PROJECT_DIR$/data/allowedToUploadAndEdit" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/http_helper.py" beforeDir="false" afterPath="$PROJECT_DIR$/http_helper.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/http_server_2018-11-20.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/http_server_2018-11-20.log" afterDir="false" />
     </list>
@@ -116,41 +117,44 @@
     <session id="-828581819">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="4" />
+          <entry key="project.open.time.26" value="1" />
           <entry key="project.open.time.4" value="1" />
-          <entry key="project.open.time.5" value="2" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.open.time.5" value="3" />
+          <entry key="project.opened" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="85" />
-          <entry key="py" value="162" />
-          <entry key="txt" value="184" />
+          <entry key="py" value="522" />
+          <entry key="txt" value="271" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="85" />
-          <entry key="PLAIN_TEXT" value="184" />
-          <entry key="Python" value="162" />
+          <entry key="PLAIN_TEXT" value="271" />
+          <entry key="Python" value="522" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="csv" value="1" />
           <entry key="html" value="1" />
-          <entry key="jpg" value="1" />
-          <entry key="py" value="1" />
+          <entry key="jpg" value="2" />
+          <entry key="log" value="1" />
+          <entry key="py" value="3" />
           <entry key="txt" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
+          <entry key="ANSI Aware" value="1" />
           <entry key="HTML" value="1" />
-          <entry key="Image" value="1" />
+          <entry key="Image" value="2" />
           <entry key="PLAIN_TEXT" value="3" />
-          <entry key="Python" value="1" />
+          <entry key="Python" value="3" />
         </counts>
       </usages-collector>
     </session>
@@ -163,8 +167,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web_server1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
-              <caret line="4" column="57" selection-start-line="4" selection-start-column="57" selection-end-line="4" selection-end-column="57" />
+            <state relative-caret-position="414">
+              <caret line="18" column="15" selection-start-line="18" selection-start-column="15" selection-end-line="18" selection-end-column="15" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -175,8 +179,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/http_helper.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="359">
-              <caret line="181" column="47" selection-start-line="181" selection-start-column="47" selection-end-line="181" selection-end-column="47" />
+            <state relative-caret-position="451">
+              <caret line="181" column="21" selection-start-line="181" selection-start-column="21" selection-end-line="181" selection-end-column="21" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -185,38 +189,12 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sandbox2.py">
+        <entry file="file://$PROJECT_DIR$/logs/http_server_2018-11-21.log">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-              <folding>
-                <element signature="e#0#10#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="327">
+              <caret line="276" lean-forward="true" selection-start-line="276" selection-end-line="276" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/logs/http_server_2018-11-20.log">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-5585">
-              <caret line="33" selection-start-line="33" selection-end-line="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/exceptions/forbidden.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/exceptions/moved_temp.csv">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -231,9 +209,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>webpage</find>
-      <find>hande_web</find>
-      <find>webp</find>
       <find>webpage_fun</find>
       <find>handle_for</find>
       <find>webpage_functions</find>
@@ -242,7 +217,6 @@
       <find>image</find>
       <find>webpage_funct</find>
       <find>get_req</find>
-      <find>post</find>
       <find>split_res</find>
       <find>recv</find>
       <find>500</find>
@@ -258,9 +232,13 @@
       <find>open</find>
       <find>os.path.exists</find>
       <find>.isfile</find>
-      <find>print</find>
       <find>os.mkdir</find>
       <find>log_to_fi</find>
+      <find>print</find>
+      <find>send</find>
+      <find>post</find>
+      <find>get_file_content</find>
+      <find>save_file_from</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -297,8 +275,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-10" />
-    <option name="y" value="-10" />
+    <option name="x" value="-195" />
+    <option name="y" value="-25" />
     <option name="width" value="1380" />
     <option name="height" value="745" />
   </component>
@@ -310,6 +288,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -317,11 +296,15 @@
               <item name="http-server" type="b2602c69:ProjectViewProjectNode" />
               <item name="http-server" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="http-server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="http-server" type="462c0819:PsiDirectoryNode" />
+              <item name="upload" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -348,7 +331,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.sandbox2">
+  <component name="RunManager" selected="Python.web_server1">
     <configuration name="http_helper" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="webroot" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -441,9 +424,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.web_server1" />
         <item itemvalue="Python.sandbox2" />
         <item itemvalue="Python.http_helper" />
-        <item itemvalue="Python.web_server1" />
         <item itemvalue="Python.sandbox" />
       </list>
     </recent_temporary>
@@ -677,7 +660,14 @@
       <option name="project" value="LOCAL" />
       <updated>1542747685941</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Changed logging function&#10;&#10;'//' is now replaced with '/'">
+      <created>1542748045497</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1542748045497</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TodoView">
@@ -693,8 +683,8 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Favorites" order="0" sideWeight="0.5027933" side_tool="true" weight="0.26304692" />
-      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.49720672" weight="0.28486452" />
+      <window_info id="Favorites" order="0" sideWeight="0.50361794" side_tool="true" weight="0.28486452" />
+      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.49638206" visible="true" weight="0.28486452" />
       <window_info id="Structure" order="2" sideWeight="0.5011013" side_tool="true" weight="0.2576" />
       <window_info id="DB Browser" order="3" weight="0.3296" />
       <window_info anchor="bottom" id="Python Console" order="0" sideWeight="0.4992" weight="0.32929516" />
@@ -703,7 +693,7 @@
       <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49813333" weight="0.26483357" />
       <window_info anchor="bottom" x="-399" y="477" width="1875" height="299" id="TODO" order="4" sideWeight="0.49813333" weight="0.32929516" />
       <window_info anchor="bottom" id="Message" order="5" />
-      <window_info anchor="bottom" id="Find" order="6" weight="0.32929516" />
+      <window_info anchor="bottom" id="Find" order="6" weight="0.32850942" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
@@ -818,7 +808,8 @@
     <MESSAGE value="Changed the 'full_running_dir'variable" />
     <MESSAGE value="Update" />
     <MESSAGE value="Minor bug fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="Minor bug fix" />
+    <MESSAGE value="Changed logging function&#10;&#10;'//' is now replaced with '/'" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed logging function&#10;&#10;'//' is now replaced with '/'" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/NotFound.html" />
@@ -828,9 +819,6 @@
     <entry file="file://$PROJECT_DIR$/exceptions/forbidden" />
     <entry file="file://$PROJECT_DIR$/logs/http_server_2018-11-09.log" />
     <entry file="file://$PROJECT_DIR$/hello.csv" />
-    <entry file="file://$PROJECT_DIR$/sandbox.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/https_sandbox.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -853,6 +841,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index1.html" />
     <entry file="file://$PROJECT_DIR$/readme.md">
+      <provider editor-type-id="text-editor" />
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="23">
@@ -861,7 +850,6 @@
           <second_editor />
         </state>
       </provider>
-      <provider editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/logs/http_server_2018-11-04.log">
       <provider editor-type-id="text-editor" />
@@ -914,6 +902,9 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/textfile.txt" />
+    <entry file="file://$PROJECT_DIR$/upload/CzBTBK3WEAEGIi7.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/exceptions/moved_temp.csv">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -928,36 +919,45 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
           <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/upload/CzBTBK3WEAEGIi7.jpg">
+    <entry file="file://$PROJECT_DIR$/upload/camille-champion-splash_art-(781).jpg">
       <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logs/http_server_2018-11-20.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="328" lean-forward="true" selection-start-line="328" selection-end-line="328" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logs/http_server_2018-11-21.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="327">
+          <caret line="276" lean-forward="true" selection-start-line="276" selection-end-line="276" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web_server1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="4" column="57" selection-start-line="4" selection-start-column="57" selection-end-line="4" selection-end-column="57" />
+        <state relative-caret-position="414">
+          <caret line="18" column="15" selection-start-line="18" selection-start-column="15" selection-end-line="18" selection-end-column="15" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/logs/http_server_2018-11-20.log">
+    <entry file="file://$PROJECT_DIR$/sandbox.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5585">
-          <caret line="33" selection-start-line="33" selection-end-line="33" />
-        </state>
+        <state relative-caret-position="-179" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/http_helper.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="181" column="47" selection-start-line="181" selection-start-column="47" selection-end-line="181" selection-end-column="47" />
+        <state relative-caret-position="451">
+          <caret line="181" column="21" selection-start-line="181" selection-start-column="21" selection-end-line="181" selection-end-column="21" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>

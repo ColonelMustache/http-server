@@ -114,21 +114,26 @@ def handle_post(request, client_sock, headers, extra_data):
     destination, variables = split_resource(request)
     # print "length:", content_length
     # print content_length, destination, variables, 'HELLO'
-    file_contents = extra_data
+    file_is_saved = extra_data
     if not os.path.exists('upload/'):
         os.mkdir('upload/')
     if check_allowed_upload(destination, variables['file-name']):
-        with open(full_running_dir + destination + '/' + variables['file-name'], 'wb+') as new_file:
-            if content_length:
-                file_contents += get_file_content_from_post(client_sock, content_length - len(extra_data))
-            else:
-                file_contents += get_file_content_from_post(client_sock, False)
-            new_file.write(file_contents)
+        file_to_save = full_running_dir + destination + '/' + variables['file-name']
+        length_left = content_length - len(extra_data)
+        if content_length:
+            file_is_saved += save_file_from_post(client_sock, length_left, file_to_save)
+        else:
+            file_is_saved += save_file_from_post(client_sock, False, file_to_save)
+        if file_is_saved:
             header = "HTTP/1.1 201 Created\r\n" \
                      "\r\n"
             client_sock.send(header)
             client_sock.send('Success!')
-            log_to_file(' | '.join(header.strip('\r\n').split('\r\n')), 'localhost, 80')
+        else:
+            header = "POST was requested\r\n" \
+                     "Connection Lost, Terminated Transfer\r\n" \
+                     "\r\n"
+        log_to_file(' | '.join(header.strip('\r\n').split('\r\n')), 'localhost, 80')
 
 
 def check_allowed_upload(folder, file_name):
@@ -157,19 +162,24 @@ def check_is_in_allowed_files(file_to_check):
         return False
 
 
-def get_file_content_from_post(client_sock, left_data_length):
-    data = ''
-    if left_data_length:
-        while len(data) < left_data_length:
-            new_data = client_sock.recv(4096)
-            data += new_data
-    else:
-        while True:
-            new_data = client_sock.recv(4096)
-            if not new_data:
-                break
-            data += new_data
-    return data  # all of the rest of the data of the file
+def save_file_from_post(client_sock, left_data_length, file_to_save):
+    with open(file_to_save, 'ab+') as file_from_post:
+        data_counter = 0
+        if left_data_length:
+            while data_counter < left_data_length:
+                new_data = client_sock.recv(4096)
+                if new_data == '':
+                    return False
+                data_counter += len(new_data)
+                file_from_post.write(new_data)
+        else:
+            while True:
+                new_data = client_sock.recv(4096)
+                if not new_data:
+                    break
+                data_counter += len(new_data)
+                file_from_post.write(new_data)
+        return True  # all of the rest of the data of the file
 
 
 def log_to_file(to_log, address):
