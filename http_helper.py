@@ -3,6 +3,7 @@ import os
 from datetime import datetime
 import csv
 full_running_dir = (os.path.dirname(__file__) + '\\').replace('\\', '/')
+MegaByte = 1048576
 # TODO write DOCSTRING comments for all functions later
 
 
@@ -112,18 +113,17 @@ def handle_post(request, client_sock, headers, extra_data):
         # no content length header
         content_length = False
     destination, variables = split_resource(request)
-    # print "length:", content_length
-    # print content_length, destination, variables, 'HELLO'
-    file_is_saved = extra_data
+    file_to_save = full_running_dir + destination + '/' + variables['file-name']
+    with open(file_to_save, 'wb+') as file_from_post:
+        file_from_post.write(extra_data)  # writing initial data (arrived with header)
     if not os.path.exists('upload/'):
         os.mkdir('upload/')
     if check_allowed_upload(destination, variables['file-name']):
-        file_to_save = full_running_dir + destination + '/' + variables['file-name']
         length_left = content_length - len(extra_data)
         if content_length:
-            file_is_saved += save_file_from_post(client_sock, length_left, file_to_save)
+            file_is_saved = save_file_from_post(client_sock, length_left, file_to_save)
         else:
-            file_is_saved += save_file_from_post(client_sock, False, file_to_save)
+            file_is_saved = save_file_from_post(client_sock, False, file_to_save)
         if file_is_saved:
             header = "HTTP/1.1 201 Created\r\n" \
                      "\r\n"
@@ -163,13 +163,11 @@ def check_is_in_allowed_files(file_to_check):
 
 
 def save_file_from_post(client_sock, left_data_length, file_to_save):
-    if left_data_length > 20000000:  # 20MB
-        client_sock.send('Uploading...')
     with open(file_to_save, 'ab+') as file_from_post:
         data_counter = 0
         if left_data_length:
             while data_counter < left_data_length:
-                new_data = client_sock.recv(4096)
+                new_data = client_sock.recv(10*MegaByte)  # receiving 10MB so download times won't be terrible
                 if new_data == '':
                     return False
                 data_counter += len(new_data)

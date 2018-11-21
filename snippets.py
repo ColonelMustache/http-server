@@ -37,3 +37,11 @@ def handle_webpage_functions_result(client_sock, result):
     client_sock.send(header)
     client_sock.send(result)
     return header
+
+# If file is large give 'processing' message to client, didn't work out
+if left_data_length > 20000000:  # 20MB
+    temp_header = "HTTP/1.1 202 Accepted\r\n" \
+                  "\r\n"
+    log_to_file(temp_header.strip('\r\n'), 'localhost, 80')
+    client_sock.send(temp_header)
+    client_sock.send('Uploading...')
