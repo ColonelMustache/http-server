@@ -114,8 +114,8 @@ def handle_post(request, client_sock, headers, extra_data):
         content_length = False
     destination, variables = split_resource(request)
     file_to_save = full_running_dir + destination + '/' + variables['file-name']
-    if not os.path.exists('upload/'):
-        os.mkdir('upload/')
+    if not os.path.exists(full_running_dir + 'upload/'):
+        os.mkdir(full_running_dir + 'upload/')
     with open(file_to_save, 'wb+') as file_from_post:
         file_from_post.write(extra_data)  # writing initial data (arrived with header)
     if check_allowed_upload(destination, variables['file-name']):
