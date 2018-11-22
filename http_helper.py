@@ -113,17 +113,17 @@ def handle_post(request, client_sock, headers, extra_data):
         # no content length header
         content_length = False
     destination, variables = split_resource(request)
-    file_to_save = full_running_dir + destination + '/' + variables['file-name']
-    if not os.path.exists(full_running_dir + 'upload/'):
-        os.mkdir(full_running_dir + 'upload/')
-    with open(file_to_save, 'wb+') as file_from_post:
-        file_from_post.write(extra_data)  # writing initial data (arrived with header)
+    file_to_save = full_running_dir + 'upload/' + variables['file-name']
     if check_allowed_upload(destination, variables['file-name']):
+        if not os.path.exists(full_running_dir + 'upload/'):
+            os.mkdir(full_running_dir + 'upload/')
+        with open(file_to_save, 'wb+') as file_from_post:
+            file_from_post.write(extra_data)  # writing initial data (arrived with header)
         length_left = content_length - len(extra_data)
         if content_length:
             file_is_saved = save_file_from_post(client_sock, length_left, file_to_save)
         else:
-            file_is_saved = save_file_from_post(client_sock, False, file_to_save)
+            file_is_saved = save_file_from_post(client_sock, 'NaN', file_to_save)  # NaN means length is unknown
         if file_is_saved:
             header = "HTTP/1.1 201 Created\r\n" \
                      "\r\n"
@@ -133,6 +133,9 @@ def handle_post(request, client_sock, headers, extra_data):
             header = "POST was requested\r\n" \
                      "Connection Lost, Terminated Transfer\r\n" \
                      "\r\n"
+        log_to_file(' | '.join(header.strip('\r\n').split('\r\n')), 'localhost, 80')
+    else:
+        header = handle_forbidden(client_sock, False)
         log_to_file(' | '.join(header.strip('\r\n').split('\r\n')), 'localhost, 80')
 
 
@@ -145,16 +148,18 @@ def check_allowed_upload(folder, file_name):
     """
     full_dir = folder + '/' + file_name
     if os.path.isfile(full_running_dir + full_dir):
-        if full_dir in open(full_running_dir + 'data/allowedToUploadAndEdit', 'r').read().splitlines():
+        with open(full_running_dir + 'data/allowedToUploadAndEdit', 'r') as fh:
+            allowed_to_upload = fh.read().splitlines()
+        if full_dir in allowed_to_upload:
             return True
         return False
     else:
-        if check_is_in_allowed_files(full_dir):
+        if check_not_in_allowed_files(full_dir):
             open(full_running_dir + 'data/allowedToUploadAndEdit', 'a+').write(full_dir + '\n')  # added to legal files
     return True  # if file doesnt exist it is ok
 
 
-def check_is_in_allowed_files(file_to_check):
+def check_not_in_allowed_files(file_to_check):
     with open(full_running_dir + 'data/allowedToUploadAndEdit', 'a+') as allowed_files:
         allowed_files_list = allowed_files.read().splitlines()
         if file_to_check not in allowed_files_list:
@@ -168,18 +173,18 @@ def save_file_from_post(client_sock, left_data_length, file_to_save):
         if left_data_length:
             while data_counter < left_data_length:
                 new_data = client_sock.recv(10*MegaByte)  # receiving 10MB so download times won't be terrible
-                if new_data == '':
+                if not len(new_data):
                     return False
                 data_counter += len(new_data)
                 file_from_post.write(new_data)
-        else:
+        elif left_data_length == 'NaN':
             while True:
                 new_data = client_sock.recv(4096)
                 if not new_data:
                     break
                 data_counter += len(new_data)
                 file_from_post.write(new_data)
-        return True  # all of the rest of the data of the file
+        return True
 
 
 def log_to_file(to_log, address):
@@ -244,7 +249,7 @@ def resource_is_in_forbidden(resource, files):
             return True
 
 
-def handle_forbidden(client_sock):
+def handle_forbidden(client_sock, with_html_page):
     # code gets here if the file requested was forbidden to access
     with open(full_running_dir + "statusCodes/Forbidden.html", 'rb') as forbidden:
         data = forbidden.read()
@@ -252,8 +257,13 @@ def handle_forbidden(client_sock):
                  "Content-Length: %d\r\n" \
                  "Content-Type: text/html; charset=UTF-8\r\n" \
                  "\r\n" % len(data)
-        client_sock.send(header)
-        client_sock.sendall(data)
+        if with_html_page:
+            client_sock.send(header)
+            client_sock.sendall(data)
+        else:
+            header = "HTTP/1.1 403 Forbidden\r\n" \
+                     "\r\n"
+            client_sock.send(header)
     return header
 
 
@@ -280,7 +290,7 @@ def handle_moved_temp(client_sock, new_location):
 def check_exception(resource, client_sock):
     moved_temp = check_moved_temp(resource)
     if check_forbidden(resource):
-        return handle_forbidden(client_sock)
+        return handle_forbidden(client_sock, True)
     elif moved_temp:
         return handle_moved_temp(client_sock, moved_temp)
     return False
