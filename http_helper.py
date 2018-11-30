@@ -5,6 +5,7 @@ import csv
 full_running_dir = (os.path.dirname(__file__) + '\\').replace('\\', '/')
 MegaByte = 1048576
 # TODO write DOCSTRING comments for all functions later
+# TODO add function to translate url codes to text (i.e %2F = '/')
 
 
 def get_request(request):
@@ -194,6 +195,8 @@ def log_to_file(to_log, address):
 
 def get_content_type(file_name):
     search_object = re.search('.*\.(\w*)', file_name)
+    if not search_object:
+        return
     file_type = search_object.group(1).upper()
     if file_type == 'TXT' or file_type == 'HTML':
         content_type = 'text/html; charset=UTF-8'

@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="0; url=http://www.itay.com/" />
+    <title>Hello</title>
+</head>
+<body>
+    <p>HELLO!</p>
+    <p><a href="http://www.itay.com/">Redirect</a></p>
+</body>
+</html>
