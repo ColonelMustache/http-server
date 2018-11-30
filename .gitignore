@@ -5,3 +5,4 @@ upload/
 index.html
 # Ignore log files, log files are auto generated
 # *.log
+allowedToUploadAndEdit
